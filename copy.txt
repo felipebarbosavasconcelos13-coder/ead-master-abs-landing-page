@@ -2,7 +2,7 @@ COPY OTIMIZADA – VERSÃO DE ALTA CONVERSÃO
 
 🔻 DOBRA 1 – IMPACTO (AGRESSIVA)
 HEADLINE
-Pare de perder dinheiro na oficina por não saber diagnosticar freios ABS corretamente
+Pare de perder dinheiro na oficina por não saber diagnosticar ABS de carros e motos corretamente
 SUBHEADLINE
 Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor
 QUEBRA DE CRENÇA
@@ -14,7 +14,7 @@ CTA do botão
 
 🔻 DOBRA 2 – IDENTIFICAÇÃO
 Seja sincero:
-Você já pegou um carro com luz de ABS acesa e ficou perdido?
+Você já pegou um carro ou uma moto com luz de ABS acesa e ficou perdido?
 Já trocou peça e o erro voltou?
 Já travou na frente do cliente sem saber explicar?
 Já perdeu serviço porque outro resolveu mais rápido?
@@ -49,7 +49,7 @@ CTA do botão
 
 🔻 DOBRA 5 – SOLUÇÃO
 Apresentando:
-EAD MASTER EM FREIOS ABS/ESP/EPB – VERSÃO 360º
+EAD MASTER EM FREIOS ABS/ESP/EPB – CARROS E MOTOS – VERSÃO 360º
 Um treinamento criado para te tirar do achismo
 e te colocar no controle total do diagnóstico
 Você aprende o que aplicar direto na oficina
@@ -89,6 +89,7 @@ EPB
 Rede CAN
 ADAS
 Desobstrução de módulo hidráulico
+ABS de Motocicletas (Especial)
 Aqui está o conhecimento que faz mecânico comum virar especialista
 CTA do botão
  Quero acesso às aulas
@@ -180,8 +181,8 @@ Preciso de scanner caro?
 Não
 É difícil?
 Não, é método
-Serve para qualquer carro?
-Sim
+Serve para qualquer veículo?
+Sim. Carros e motos de média/alta cilindrada.
 Não tenho tempo
 Você aprende no seu ritmo
 CTA do botão
