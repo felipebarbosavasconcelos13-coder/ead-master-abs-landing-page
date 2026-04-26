@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAD MASTER EM FREIOS ABS/ESP/EPB – VERSÃO 360º</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary: #FF4500; /* Safety Orange */
+            --primary-glow: rgba(255, 69, 0, 0.4);
+            --secondary: #FFD700; /* Safety Yellow */
+            --background: #0A0A0A;
+            --surface: #141414;
+            --steel: #2D2D2D;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--background);
+            color: #E0E0E0;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-industrial { 
+            font-family: 'Barlow Condensed', sans-serif; 
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .carbon-pattern {
+            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
+                              linear-gradient(-45deg, #111 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #111 75%), 
+                              linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 4px 4px;
+            background-color: #0A0A0A;
+        }
+
+        .warning-divider {
+            height: 12px;
+            background: repeating-linear-gradient(
+                -45deg,
+                #000,
+                #000 10px,
+                var(--secondary) 10px,
+                var(--secondary) 20px
+            );
+        }
+
+        .hard-edge { border-radius: 0 !important; }
+        
+        .btn-industrial {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            background: var(--primary);
+            color: black;
+            font-weight: 900;
+            padding: 1.25rem 2.5rem;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .btn-industrial:hover {
+            background: #FF5714;
+            box-shadow: 0 0 30px var(--primary-glow);
+            transform: translateY(-2px);
+        }
+
+        .btn-industrial::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-industrial:hover::after {
+            left: 100%;
+        }
+
+        .monolith-card {
+            background: var(--surface);
+            border: 1px solid #333;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .monolith-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #A1A1AA;
+        }
+
+        .check-item span {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .gradient-border {
+            position: relative;
+            background: var(--surface);
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: -1;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF4500',
+                        secondary: '#FFD700',
+                        dark: '#0A0A0A',
+                        steel: '#2D2D2D',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection:bg-primary selection:text-white">
+
+<main>
+    <!-- WARNING TOP BAR -->
+    <div class="warning-divider"></div>
+
+    <!-- DOBRA 1: IMPACTO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden carbon-pattern">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/workshop_hero_bg_1777226398277.png" class="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Workshop Background">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/50"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 text-primary font-industrial text-sm mb-6">
+                    <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                    MÉTODO DIRETO E VALIDADO
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black leading-none mb-6 glow-text italic uppercase">
+                    Pare de perder <span class="text-primary">dinheiro</span> na oficina por não saber diagnosticar freios ABS corretamente
+                </h1>
+                <p class="text-xl md:text-2xl text-zinc-400 max-w-xl mb-6 font-light leading-relaxed">
+                    Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.
+                </p>
+                <div class="bg-steel/50 border-l-4 border-secondary p-4 mb-10 max-w-lg">
+                    <p class="text-secondary font-industrial text-lg">
+                        ⚠️ Não é falta de ferramenta. Não é falta de experiência. <span class="text-white underline">É falta de método.</span>
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#oferta" class="btn-industrial hard-edge text-center text-xl">
+                        Quero dominar o diagnóstico de freios agora
+                        <span class="material-symbols-outlined">trending_flat</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block relative">
+                <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+                <img src="assets/technical_blueprint_abs_1777226434804.png" class="relative z-10 w-full border border-white/10" alt="ABS Tech">
+            </div>
+        </div>
+    </section>
+
+    <!-- WARNING STRIPE -->
+    <div class="warning-divider"></div>
+
+    <!-- DOBRA 2: IDENTIFICAÇÃO -->
+    <section class="py-24 bg-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-black mb-16">SEJA SINCERO:</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">search_off</span>
+                    <p class="text-lg">Você já pegou um carro com luz de ABS acesa e ficou perdido?</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">history</span>
+                    <p class="text-lg">Já trocou peça e o erro voltou?</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">person_off</span>
+                    <p class="text-lg">Já travou na frente do cliente sem saber explicar?</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">timer_off</span>
+                    <p class="text-lg">Já perdeu serviço porque outro resolveu mais rápido?</p>
+                </div>
+            </div>
+            <div class="mt-16 max-w-3xl mx-auto p-8 bg-zinc-900 border border-zinc-800">
+                <p class="text-2xl text-zinc-400">Isso não é azar. <span class="text-white font-bold italic">É padrão de quem não tem método.</span></p>
+                <a href="#oferta" class="btn-industrial mt-8">Eu não quero mais passar por isso</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 3: DOR + PERDA -->
+    <section class="py-24 carbon-pattern">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-5xl font-black mb-8 leading-tight">CADA ERRO NO DIAGNÓSTICO <span class="text-primary italic">CUSTA:</span></h2>
+                <div class="space-y-4 mb-12">
+                    <div class="flex items-center gap-4 text-3xl font-industrial text-zinc-500">
+                        <span class="text-primary">01.</span> DINHEIRO
+                    </div>
+                    <div class="flex items-center gap-4 text-3xl font-industrial text-zinc-500">
+                        <span class="text-primary">02.</span> TEMPO
+                    </div>
+                    <div class="flex items-center gap-4 text-3xl font-industrial text-zinc-500">
+                        <span class="text-primary">03.</span> REPUTAÇÃO
+                    </div>
+                </div>
+                <p class="text-xl text-zinc-400 mb-8">
+                    E tem algo pior: Você começa a evitar carros mais modernos porque sabe que pode dar problema. Enquanto isso, outros mecânicos estão faturando alto justamente nesses serviços que você evita.
+                </p>
+                <a href="#oferta" class="btn-industrial">Quero parar de perder dinheiro</a>
+            </div>
+            <div class="relative">
+                <img src="assets/mechanic_master_scene_1777226418380.png" class="w-full grayscale brightness-50" alt="Mecânico Preocupado">
+                <div class="absolute inset-0 bg-primary/10 mix-blend-color"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 4: REVELAÇÃO -->
+    <section class="py-24 bg-zinc-950 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black mb-12">O MERCADO MUDOU</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-2xl font-bold mb-4 italic">CARROS EVOLUÍRAM</h3>
+                    <p class="text-zinc-500">Sistemas mecânicos agora são 100% eletrônicos e integrados.</p>
+                </div>
+                <div class="p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-2xl font-bold mb-4 italic">SCANNER NÃO É TUDO</h3>
+                    <p class="text-zinc-500">O problema não é o scanner, é não saber o que fazer com ele.</p>
+                </div>
+                <div class="p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-2xl font-bold mb-4 italic">SEM LUZ NO FIM</h3>
+                    <p class="text-zinc-500">Sem método, você trabalha no escuro e torce para dar certo.</p>
+                </div>
+            </div>
+            <a href="#oferta" class="btn-industrial">Quero aprender o método certo</a>
+        </div>
+    </section>
+
+    <!-- DOBRA 5: SOLUÇÃO -->
+    <section class="py-24 bg-dark relative">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-primary font-industrial tracking-[0.3em] mb-4 block">APRESENTANDO:</span>
+            <h2 class="text-6xl md:text-8xl font-black mb-8 italic">EAD MASTER EM FREIOS <br> <span class="text-secondary">ABS/ESP/EPB – VERSÃO 360º</span></h2>
+            <p class="text-2xl text-zinc-400 max-w-3xl mx-auto mb-12">Um treinamento criado para te tirar do achismo e te colocar no controle total do diagnóstico. Você aprende o que aplicar direto na oficina.</p>
+            <a href="#oferta" class="btn-industrial">Quero entrar no EAD Master</a>
+        </div>
+    </section>
+
+    <!-- DOBRA 6: PROMESSA -->
+    <section class="py-24 carbon-pattern">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-5xl font-black">AQUI VOCÊ APRENDE A:</h2>
+                    <ul class="space-y-6">
+                        <li class="check-item text-xl"><span>✓</span> Diagnosticar com precisão</li>
+                        <li class="check-item text-xl"><span>✓</span> Interpretar qualquer código de falha</li>
+                        <li class="check-item text-xl"><span>✓</span> Parar de trocar peça sem necessidade</li>
+                        <li class="check-item text-xl"><span>✓</span> Resolver problemas que outros não conseguem</li>
+                        <li class="check-item text-xl"><span>✓</span> E transformar isso em faturamento</li>
+                    </ul>
+                    <a href="#oferta" class="btn-industrial">Quero esse nível de domínio</a>
+                </div>
+                <div class="bg-surface p-2 border border-zinc-800">
+                    <img src="assets/technical_blueprint_abs_1777226434804.png" class="w-full" alt="Diagnóstico">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 7: MÉTODO -->
+    <section class="py-24 bg-dark">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-black mb-16">MÉTODO <span class="text-primary italic">VALIDADO</span></h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="monolith-card border-t-4 border-primary">
+                    <div class="text-4xl font-black mb-4 text-zinc-700">01</div>
+                    <h3 class="text-xl font-bold mb-2">ENTENDER</h3>
+                    <p class="text-zinc-500 text-sm">Entenda o funcionamento real do sistema eletrônico.</p>
+                </div>
+                <div class="monolith-card border-t-4 border-primary">
+                    <div class="text-4xl font-black mb-4 text-zinc-700">02</div>
+                    <h3 class="text-xl font-bold mb-2">LER</h3>
+                    <p class="text-zinc-500 text-sm">Leia e interprete o scanner da maneira correta.</p>
+                </div>
+                <div class="monolith-card border-t-4 border-primary">
+                    <div class="text-4xl font-black mb-4 text-zinc-700">03</div>
+                    <h3 class="text-xl font-bold mb-2">DIAGNOSTICAR</h3>
+                    <p class="text-zinc-500 text-sm">Siga o passo a passo lógico para isolar a falha.</p>
+                </div>
+                <div class="monolith-card border-t-4 border-primary">
+                    <div class="text-4xl font-black mb-4 text-zinc-700">04</div>
+                    <h3 class="text-xl font-bold mb-2">EXECUTAR</h3>
+                    <p class="text-zinc-500 text-sm">Execute o reparo sem medo de retorno ou prejuízo.</p>
+                </div>
+            </div>
+            <p class="mt-12 text-2xl italic text-secondary">Isso elimina a maior dor da oficina: INCERTEZA.</p>
+            <a href="#oferta" class="btn-industrial mt-8">Quero seguir esse método</a>
+        </div>
+    </section>
+
+    <!-- DOBRA 8: CONTEÚDO -->
+    <section class="py-24 carbon-pattern">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black">MAIS DE <span class="text-primary">120 AULAS</span> PRÁTICAS</h2>
+                <p class="text-zinc-400 mt-4 text-xl italic">Aqui está o conhecimento que faz mecânico comum virar especialista</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">ABS COMPLETO</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SENSORES (HALL/AMR)</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">SCANNER & PARÂMETROS</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMA ESP</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">EPB (FREIO ELETRÔNICO)</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">REDE CAN</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMAS ADAS</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">MÓDULO HIDRÁULICO</div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="btn-industrial">Quero acesso às aulas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 9 & 10: OPORTUNIDADE + TRANSFORMAÇÃO -->
+    <section class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-16">O DINHEIRO HOJE ESTÁ NO <span class="text-secondary italic">DIAGNÓSTICO</span></h2>
+            <div class="grid md:grid-cols-2 gap-px bg-zinc-800 border border-zinc-800">
+                <div class="bg-zinc-950 p-12">
+                    <h3 class="text-2xl font-bold mb-8 text-red-500 italic">SEM O MÉTODO</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-zinc-500"><span class="text-red-500">✕</span> Você trabalha inseguro</li>
+                        <li class="flex items-center gap-3 text-zinc-500"><span class="text-red-500">✕</span> Perde tempo precioso</li>
+                        <li class="flex items-center gap-3 text-zinc-500"><span class="text-red-500">✕</span> Perde dinheiro em peças</li>
+                        <li class="flex items-center gap-3 text-zinc-500"><span class="text-red-500">✕</span> O cliente não confia 100%</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900 p-12">
+                    <h3 class="text-2xl font-bold mb-8 text-green-500 italic">COM O MÉTODO</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-500">✓</span> Você domina o diagnóstico</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-500">✓</span> Resolve com rapidez</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-500">✓</span> Pode cobrar mais caro</li>
+                        <li class="flex items-center gap-3 text-zinc-300"><span class="text-green-500">✓</span> Vira referência técnica</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="btn-industrial">Quero essa transformação</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 11: AUTORIDADE -->
+    <section class="py-24 carbon-pattern">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-primary/20 blur-2xl"></div>
+                <img src="assets/mechanic_master_scene_1777226418380.png" class="relative z-10 grayscale border border-white/10" alt="Alex Tadeu">
+            </div>
+            <div>
+                <span class="text-primary font-industrial mb-2 block">SEU INSTRUTOR</span>
+                <h2 class="text-6xl font-black mb-6 italic">ALEX TADEU</h2>
+                <p class="text-2xl text-zinc-300 mb-6 font-light">Especialista em diagnóstico automotivo focado em ensino prático.</p>
+                <p class="text-zinc-500 text-lg leading-relaxed mb-8">
+                    Formando mecânicos que hoje faturam mais. Aqui não é teoria de sala de aula, é a pura prática do dia a dia da oficina. Aprendizado direto no campo de batalha para quem quer resultado imediato.
+                </p>
+                <a href="#oferta" class="btn-industrial">Quero aprender com quem faz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA DE PROVA SOCIAL: DEPOIMENTOS -->
+    <section class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-primary font-industrial tracking-[0.3em] mb-4 block">PROVA REAL</span>
+                <h2 class="text-5xl md:text-6xl font-black italic">RESULTADOS DE QUEM <span class="text-secondary">ESTÁ NO CAMPO DE BATALHA</span></h2>
+                <p class="text-zinc-500 mt-4 text-xl">Veja o depoimento de alunos que transformaram suas oficinas com o EAD Master.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- VÍDEO 1 -->
+                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                    <div class="video-container">
+                        <!-- Substitua o ID 'VIDEO_ID_1' pelo ID real do vídeo do YouTube -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-white">Aluno 01 - Nome/Oficina</h3>
+                        <p class="text-zinc-500 text-sm">"Resolvi um ABS que estava parado há 15 dias em 2 horas."</p>
+                    </div>
+                </div>
+
+                <!-- VÍDEO 2 -->
+                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                    <div class="video-container">
+                        <!-- Substitua o ID 'VIDEO_ID_2' pelo ID real do vídeo do YouTube -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-white">Aluno 02 - Nome/Oficina</h3>
+                        <p class="text-zinc-500 text-sm">"O curso se pagou na primeira semana de aplicação."</p>
+                    </div>
+                </div>
+
+                <!-- VÍDEO 3 -->
+                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                    <div class="video-container">
+                        <!-- Substitua o ID 'VIDEO_ID_3' pelo ID real do vídeo do YouTube -->
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-white">Aluno 03 - Nome/Oficina</h3>
+                        <p class="text-zinc-500 text-sm">"Suporte nota 10, me ajudou em um diagnóstico complexo."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#oferta" class="btn-industrial">Quero ter esses resultados também</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 12: BÔNUS -->
+    <section class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-black mb-16 italic">VOCÊ NÃO ENTRA <span class="text-primary">SOZINHO</span></h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="monolith-card bg-zinc-900 border-primary">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">forum</span>
+                    <h3 class="font-bold mb-2">SUPORTE VIP</h3>
+                    <p class="text-zinc-500 text-sm">Direto no WhatsApp para tirar dúvidas reais.</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">menu_book</span>
+                    <h3 class="font-bold mb-2">APOSTILA COMPLETA</h3>
+                    <p class="text-zinc-500 text-sm">Material de consulta técnica detalhado.</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">checklist</span>
+                    <h3 class="font-bold mb-2">CHECKLIST</h3>
+                    <p class="text-zinc-500 text-sm">Guia de diagnóstico passo a passo.</p>
+                </div>
+                <div class="monolith-card">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">all_inclusive</span>
+                    <h3 class="font-bold mb-2">ACESSO VITALÍCIO</h3>
+                    <p class="text-zinc-500 text-sm">O curso é seu para sempre, sem mensalidades.</p>
+                </div>
+            </div>
+            <a href="#oferta" class="btn-industrial mt-12">Quero suporte junto</a>
+        </div>
+    </section>
+
+    <!-- DOBRA 13: ANCORAGEM -->
+    <section class="py-24 carbon-pattern text-center border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-12">PRESTA ATENÇÃO <span class="text-secondary italic">NISSO:</span></h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="p-8 bg-red-900/10 border border-red-900/30">
+                    <p class="text-red-500 font-industrial text-xl mb-4">ERRO DE DIAGNÓSTICO</p>
+                    <p class="text-4xl font-black text-white mb-2 italic">PERDA DE R$ 1.000+</p>
+                    <p class="text-zinc-500">Peças trocadas errado e tempo perdido na oficina.</p>
+                </div>
+                <div class="p-8 bg-green-900/10 border border-green-900/30">
+                    <p class="text-green-500 font-industrial text-xl mb-4">MÉTODO MASTER</p>
+                    <p class="text-4xl font-black text-white mb-2 italic">GANHO 5X MAIOR</p>
+                    <p class="text-zinc-500">Serviços premium que pagam o curso na primeira semana.</p>
+                </div>
+            </div>
+            <p class="mt-12 text-xl text-zinc-400">Esse treinamento não é custo. É recuperação de prejuízo + aumento de faturamento.</p>
+        </div>
+    </section>
+
+    <!-- DOBRA 14 & 15: OFERTA + GARANTIA -->
+    <section id="oferta" class="py-24 bg-dark relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto border-2 border-primary p-12 bg-zinc-900 relative">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary px-8 py-2 text-black font-black italic">OFERTA ÚNICA</div>
+                <div class="text-center">
+                    <p class="text-zinc-500 line-through text-2xl mb-2">De R$ 1.690</p>
+                    <h2 class="text-7xl md:text-9xl font-black text-white mb-2 glow-text italic">R$ 697</h2>
+                    <p class="text-2xl text-secondary font-industrial mb-10">OU 12X DE R$ 69,70</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 text-left mb-12">
+                        <div class="check-item"><span>✓</span> 120+ Aulas Práticas</div>
+                        <div class="check-item"><span>✓</span> Suporte VIP WhatsApp</div>
+                        <div class="check-item"><span>✓</span> Acesso Vitalício</div>
+                        <div class="check-item"><span>✓</span> Certificado Especialista</div>
+                    </div>
+
+                    <a href="#" class="btn-industrial w-full text-2xl py-8 mb-6">Garantir minha vaga agora</a>
+                    
+                    <div class="flex items-center justify-center gap-4 text-zinc-500">
+                        <span class="material-symbols-outlined text-4xl">verified_user</span>
+                        <p class="text-left text-sm uppercase font-bold tracking-widest leading-tight">
+                            7 DIAS DE GARANTIA INCONDICIONAL <br>
+                            <span class="text-zinc-700 font-normal">Sem risco. Se não gostar, eu devolvo cada centavo.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 16: FAQ -->
+    <section class="py-24 carbon-pattern">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-5xl font-black mb-12 text-center">DÚVIDAS <span class="text-primary italic">COMUNS</span></h2>
+            <div class="space-y-4">
+                <details class="group monolith-card p-0">
+                    <summary class="p-6 cursor-pointer font-bold text-xl flex justify-between items-center list-none">
+                        Preciso de scanner caro?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400">Não. O método foca no diagnóstico lógico e interpretação de parâmetros, independente da marca do seu scanner.</div>
+                </details>
+                <details class="group monolith-card p-0">
+                    <summary class="p-6 cursor-pointer font-bold text-xl flex justify-between items-center list-none">
+                        É difícil de aprender?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400">Não é difícil, é método. Eu simplifiquei a eletrônica complexa para a linguagem de quem está no dia a dia da oficina.</div>
+                </details>
+                <details class="group monolith-card p-0">
+                    <summary class="p-6 cursor-pointer font-bold text-xl flex justify-between items-center list-none">
+                        Serve para qualquer carro?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-zinc-400">Sim. Os sistemas ABS, ESP e EPB seguem padrões globais de engenharia que cobrimos detalhadamente no curso.</div>
+                </details>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#oferta" class="btn-industrial">Quero começar mesmo com dúvidas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 17: FECHAMENTO -->
+    <section class="py-24 bg-primary text-black text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black mb-8 italic">O MERCADO NÃO ESPERA</h2>
+            <p class="text-2xl font-bold mb-12 max-w-2xl mx-auto leading-tight">Ou você continua perdendo dinheiro e ficando para trás, ou você decide evoluir e faturar como um especialista hoje.</p>
+            <a href="#oferta" class="bg-black text-primary px-12 py-6 text-2xl font-black italic hover:scale-105 transition-transform inline-block">
+                QUERO DOMINAR O DIAGNÓSTICO E FATURAR MAIS AGORA
+            </a>
+        </div>
+        <!-- DECORATIVE BACKGROUND TEXT -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+            <span class="text-[20vw] font-black italic select-none">NOW</span>
+        </div>
+    </section>
+
+</main>
+
+<footer class="py-12 bg-black border-t border-white/5">
+    <div class="container mx-auto px-6 text-center">
+        <div class="warning-divider w-24 mx-auto mb-8"></div>
+        <p class="text-zinc-500 text-sm uppercase tracking-widest">
+            © 2026 Alex Tadeu - EAD Master em Freios. <br>
+            <span class="text-zinc-700">Desenvolvido com UI/UX Pro Max Intelligence.</span>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
