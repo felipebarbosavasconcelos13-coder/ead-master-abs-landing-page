@@ -81,12 +81,14 @@
             cursor: pointer;
             overflow: hidden;
             text-decoration: none;
+            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
         .btn-industrial:hover {
             background: #FF5714;
             box-shadow: 0 0 30px var(--primary-glow);
             transform: translateY(-2px);
+            animation: none;
         }
 
         .btn-industrial::after {
@@ -153,6 +155,16 @@
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
+        }
+        @keyframes pulse-btn {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 var(--primary-glow); }
+            50% { transform: scale(1.04); box-shadow: 0 0 20px 10px rgba(255, 69, 0, 0.35); }
+        }
+        .btn-pulse {
+            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .btn-pulse:hover {
+            animation: none;
         }
         .video-container {
             position: relative;
@@ -569,7 +581,7 @@
                         <div class="check-item"><span>✓</span> Certificado Especialista</div>
                     </div>
 
-                    <a href="#" class="btn-industrial w-full text-lg md:text-2xl py-4 md:py-8 mb-6">Garantir minha vaga agora</a>
+                    <a href="javascript:void(0)" onclick="openCheckoutModal()" class="btn-industrial w-full text-lg md:text-2xl py-4 md:py-8 mb-6 btn-pulse">Garantir minha vaga agora</a>
                     
                     <div class="flex items-center justify-center gap-4 text-zinc-500">
                         <span class="material-symbols-outlined text-4xl">verified_user</span>
@@ -628,7 +640,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-3xl md:text-7xl font-black mb-4 md:mb-8 italic">O MERCADO NÃO ESPERA</h2>
             <p class="text-lg md:text-2xl font-bold mb-6 md:mb-12 max-w-2xl mx-auto leading-tight">Ou você continua perdendo dinheiro e ficando para trás, ou você decide evoluir e faturar como um especialista hoje.</p>
-            <a href="#oferta" class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block">
+            <a href="#oferta" class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block btn-pulse">
                 QUERO DOMINAR O DIAGNÓSTICO E FATURAR MAIS AGORA
             </a>
         </div>
@@ -649,6 +661,106 @@
         </p>
     </div>
 </footer>
+
+<!-- ==========================================
+     POP-UP (MODAL) DE CAPTURA DE LEAD
+     ========================================== -->
+<div id="checkoutModal" class="fixed inset-0 bg-black/90 z-[9999] hidden flex items-center justify-center opacity-0 transition-opacity duration-300 px-4" style="backdrop-filter: blur(4px);">
+    <div id="checkoutModalContent" class="bg-zinc-900 border border-zinc-700 rounded-2xl p-6 md:p-8 w-full max-w-md relative transform scale-95 transition-transform duration-300" style="box-shadow: 0 0 40px rgba(255, 69, 0, 0.2);">
+        
+        <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <h3 class="font-industrial font-bold text-2xl text-white mb-2">Quase lá!</h3>
+        <p class="text-zinc-400 text-sm mb-6">Preencha seus dados para liberar seu acesso ao treinamento.</p>
+        
+        <form id="leadForm" class="space-y-4">
+            <div>
+                <label for="leadNome" class="block text-sm text-zinc-300 mb-1">Seu Nome Completo</label>
+                <input type="text" id="leadNome" required class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Ex: João da Silva">
+            </div>
+            <div>
+                <label for="leadWhatsApp" class="block text-sm text-zinc-300 mb-1">Seu WhatsApp</label>
+                <input type="tel" id="leadWhatsApp" required class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="(11) 99999-9999">
+            </div>
+            
+            <button type="submit" id="submitLeadBtn" class="w-full font-industrial bg-primary hover:bg-orange-600 text-black text-lg font-bold py-4 px-4 rounded-lg transition-all active:scale-95 uppercase mt-4 flex items-center justify-center gap-2" style="box-shadow: 0 4px 20px rgba(255, 69, 0, 0.3);">
+                Continuar
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+        </form>
+        
+        <p class="text-xs text-zinc-500 text-center mt-4">Seus dados estão 100% seguros conosco.</p>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('checkoutModal');
+    const modalContent = document.getElementById('checkoutModalContent');
+    
+    function openCheckoutModal() {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        }, 10);
+    }
+
+    function closeCheckoutModal() {
+        modal.classList.add('opacity-0');
+        modalContent.classList.remove('scale-100');
+        modalContent.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeCheckoutModal();
+    });
+
+    document.getElementById('leadWhatsApp').addEventListener('input', function (e) {
+        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('submitLeadBtn');
+        const nome = document.getElementById('leadNome').value;
+        const whatsapp = document.getElementById('leadWhatsApp').value;
+        
+        const LINK_CHECKOUT_OFICIAL = "https://pay.hotmart.com/A104000703B?checkoutMode=10";
+
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...';
+        btn.disabled = true;
+        btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+        try {
+            await fetch('https://webhook.veralscastro.com.br/webhook/leads_pag_captura_alex_tadeu', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    nome: nome,
+                    whatsapp: whatsapp,
+                    origem: 'pagina_vendas_curso_p0300'
+                })
+            });
+            window.location.href = LINK_CHECKOUT_OFICIAL;
+        } catch (error) {
+            console.error('Erro ao enviar lead pro webhook:', error);
+            window.location.href = LINK_CHECKOUT_OFICIAL;
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            btn.classList.remove('opacity-75', 'cursor-not-allowed');
+        }
+    });
+</script>
 
 </body>
 </html>
