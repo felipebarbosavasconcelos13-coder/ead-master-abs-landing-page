@@ -21,14 +21,11 @@
     <style>
         :root {
             --primary: #EF1A2D; /* Crimson Red */
-            --primary-light: #FF4D5E;
-            --primary-glow: rgba(239, 26, 45, 0.6);
-            --secondary: #FACC15; /* Safety Yellow */
-            --secondary-glow: rgba(250, 204, 21, 0.4);
-            --background: #050505;
-            --surface: rgba(24, 24, 27, 0.4);
-            --surface-hover: rgba(39, 39, 42, 0.6);
-            --steel: #27272A;
+            --primary-glow: rgba(239, 26, 45, 0.4);
+            --secondary: #FFD700; /* Safety Yellow */
+            --background: #0A0A0A;
+            --surface: #141414;
+            --steel: #2D2D2D;
         }
 
         html {
@@ -37,290 +34,151 @@
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--background);
-            color: #E4E4E7;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Subtle Noise Overlay for Premium Feel */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100vw; height: 100vh;
-            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 9999;
+            color: #E0E0E0;
         }
 
         h1, h2, h3, .font-industrial { 
             font-family: 'Barlow Condensed', sans-serif; 
             text-transform: uppercase;
-            letter-spacing: 0.03em;
+            letter-spacing: -0.02em;
         }
 
-        /* Premium Text Gradients */
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #a1a1aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .text-gradient-primary {
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-light) 50%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Improved Carbon Pattern */
         .carbon-pattern {
-            background-color: var(--background);
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(239, 26, 45, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(250, 204, 21, 0.05) 0%, transparent 50%),
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-            background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
+                              linear-gradient(-45deg, #111 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #111 75%), 
+                              linear-gradient(-45deg, transparent 75%, #111 75%);
+            background-size: 4px 4px;
+            background-color: #0A0A0A;
         }
 
         .warning-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-            box-shadow: 0 0 20px var(--primary-glow);
-            opacity: 0.9;
+            height: 12px;
+            background: repeating-linear-gradient(
+                -45deg,
+                #000,
+                #000 10px,
+                var(--secondary) 10px,
+                var(--secondary) 20px
+            );
         }
 
-        .hard-edge { border-radius: 8px !important; }
+        .hard-edge { border-radius: 0 !important; }
         
-        /* Modern Button - Ultra Premium */
         .btn-industrial {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             position: relative;
-            background: linear-gradient(135deg, var(--primary) 0%, #900010 100%);
-            color: white;
-            font-weight: 800;
+            background: var(--primary);
+            color: black;
+            font-weight: 900;
             padding: 1.25rem 2.5rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 12px;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
             cursor: pointer;
             overflow: hidden;
             text-decoration: none;
-            box-shadow: 0 10px 30px -10px var(--primary-glow), inset 0 2px 0 rgba(255, 255, 255, 0.3);
-            z-index: 1;
+            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        
+
+        .btn-industrial:hover {
+            background: #C41224;
+            box-shadow: 0 0 30px var(--primary-glow);
+            transform: translateY(-2px);
+            animation: none;
+        }
+
         .btn-industrial::after {
             content: '';
             position: absolute;
             top: 0;
             left: -100%;
-            width: 50%;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            transform: skewX(-25deg);
-            transition: all 0.7s ease;
-            z-index: -1;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
         }
 
-        .btn-industrial:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 25px 50px -12px var(--primary-glow), inset 0 2px 0 rgba(255, 255, 255, 0.4);
-            background: linear-gradient(135deg, var(--primary-light) 0%, #B00015 100%);
-            border-color: rgba(255, 255, 255, 0.4);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        
         .btn-industrial:hover::after {
-            left: 200%;
+            left: 100%;
         }
 
-        /* Glassmorphism Card - Framer Style */
         .monolith-card {
             background: var(--surface);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            padding: 2.5rem;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            position: relative;
-            /* overflow: hidden; Removed to allow badges to escape */
-            transform-style: preserve-3d;
-        }
-
-        .monolith-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border-radius: inherit;
-            background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.06), transparent 40%);
-            z-index: 0;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .monolith-card > * {
-            position: relative;
-            z-index: 1;
+            border: 1px solid #333;
+            padding: 2rem;
+            transition: all 0.3s ease;
         }
 
         .monolith-card:hover {
-            border-color: rgba(239, 26, 45, 0.5);
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px -10px var(--primary-glow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            background: var(--surface-hover);
-        }
-        
-        .monolith-card:hover::before {
-            opacity: 1;
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .glow-text {
-            text-shadow: 0 0 40px var(--primary-glow);
-        }
-        
-        .glow-text-secondary {
-            text-shadow: 0 0 40px var(--secondary-glow);
+            text-shadow: 0 0 15px var(--primary-glow);
         }
 
         .check-item {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 12px;
             color: #A1A1AA;
-            padding: 16px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.015);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        .check-item:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateX(10px);
-            color: #fff;
-            box-shadow: 0 10px 20px -10px rgba(0,0,0,0.5);
-        }
-
-        .check-item span.material-symbols-outlined {
-            color: var(--primary-light);
-            background: linear-gradient(135deg, rgba(239, 26, 45, 0.25), rgba(239, 26, 45, 0.05));
-            padding: 8px;
-            border-radius: 12px;
-            border: 1px solid rgba(239, 26, 45, 0.3);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 15px rgba(239, 26, 45, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .check-item:hover span.material-symbols-outlined {
-            transform: scale(1.1);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 20px rgba(239, 26, 45, 0.4);
-            color: #fff;
+        .check-item span {
+            color: var(--primary);
+            font-weight: bold;
         }
 
         a:focus-visible, button:focus-visible, summary:focus-visible {
-            outline: 2px solid var(--primary-light);
-            outline-offset: 4px;
-            border-radius: 12px;
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
         }
 
-        /* Advanced Ambient Animations */
+        .gradient-border {
+            position: relative;
+            background: var(--surface);
+        }
+        
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            z-index: -1;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
         @keyframes pulse-btn {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 26, 45, 0.8); }
-            50% { box-shadow: 0 0 30px 20px rgba(239, 26, 45, 0.15); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 var(--primary-glow); }
+            50% { transform: scale(1.04); box-shadow: 0 0 20px 10px rgba(239, 26, 45, 0.35); }
         }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
         .btn-pulse {
-            animation: pulse-btn 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-        
         .btn-pulse:hover {
             animation: none;
         }
-        
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 */
             height: 0;
             overflow: hidden;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.8);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid #333;
         }
-        
-        .video-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 40px 80px -20px rgba(239, 26, 45, 0.3);
-            border-color: rgba(239, 26, 45, 0.4);
-        }
-
         .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-        }
-        
-        /* Feature Badge - Enhanced */
-        .feature-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, rgba(239, 26, 45, 0.15), rgba(239, 26, 45, 0.05));
-            border: 1px solid rgba(239, 26, 45, 0.3);
-            border-radius: 9999px;
-            color: #fff;
-            font-family: 'Barlow Condensed', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.9rem;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 0 20px rgba(239, 26, 45, 0.2), inset 0 1px 0 rgba(255,255,255,0.2);
-        }
-        
-        /* Smooth Details Animation */
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        
-        /* Ambient Background Blobs */
-        .ambient-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: 0;
-            animation: float 10s infinite alternate ease-in-out;
         }
     </style>
 <script>
@@ -461,7 +319,7 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
 })();
 </script>
 
-    <script>
+<script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -469,8 +327,8 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
                     colors: {
                         primary: '#EF1A2D',
                         secondary: '#FFD700',
-                        dark: '#050505',
-                        steel: '#27272A',
+                        dark: '#0A0A0A',
+                        steel: '#2D2D2D',
                     }
                 }
             }
@@ -480,11 +338,6 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
 <body class="selection:bg-primary selection:text-white">
 
 <main>
-    <!-- Ambient Background Blobs -->
-    <div class="ambient-blob bg-primary w-64 h-64 top-20 left-10"></div>
-    <div class="ambient-blob bg-secondary w-72 h-72 top-1/4 right-0" style="animation-delay: -2s;"></div>
-    <div class="ambient-blob bg-primary w-96 h-96 top-2/3 left-1/4" style="animation-delay: -5s;"></div>
-    
     <!-- WARNING TOP BAR -->
     <div class="warning-divider"></div>
 
@@ -497,20 +350,19 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
 
         <div class="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-4 md:gap-12 items-center">
             <div>
-                <div class="feature-badge mb-4 md:mb-8 animate-float" style="animation-duration: 4s;">
-                    <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                <div class="inline-flex items-center gap-1 md:gap-2 px-2 md:px-3 py-0.5 md:py-1 bg-primary/10 border border-primary/20 text-primary font-industrial text-xs md:text-sm mb-2 md:mb-6">
+                    <span class="material-symbols-outlined text-xs md:text-sm">precision_manufacturing</span>
                     MÉTODO DIRETO E VALIDADO
                 </div>
-                <h1 class="text-4xl md:text-7xl font-black leading-tight md:leading-none mb-4 md:mb-8 text-gradient italic uppercase drop-shadow-2xl">
-                    Pare de perder <span class="text-gradient-primary glow-text">dinheiro</span> na oficina por não saber diagnosticar ABS de carros e motos corretamente
+                <h1 class="text-3xl md:text-7xl font-black leading-tight md:leading-none mb-2 md:mb-6 glow-text italic uppercase">
+                    Pare de perder <span class="text-primary">dinheiro</span> na oficina por não saber diagnosticar ABS de carros e motos corretamente
                 </h1>
-                <p class="text-base md:text-2xl text-zinc-400 max-w-xl mb-6 md:mb-8 font-light leading-relaxed">
+                <p class="text-sm md:text-2xl text-zinc-400 max-w-xl mb-2 md:mb-6 font-light leading-snug md:leading-relaxed">
                     Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.
                 </p>
-                <div class="bg-surface border-l-4 border-secondary p-4 md:p-6 mb-6 md:mb-10 max-w-xl rounded-r-2xl backdrop-blur-lg shadow-xl shadow-black/50 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent pointer-events-none"></div>
-                    <p class="text-secondary font-industrial text-base md:text-xl tracking-wide relative z-10">
-                        <span class="material-symbols-outlined text-secondary align-middle text-xl md:text-2xl mr-2 glow-text-secondary">warning</span> Não é falta de ferramenta. Não é falta de experiência.<br><span class="text-white underline decoration-primary decoration-2 underline-offset-4 mt-2 inline-block">É falta de método.</span>
+                <div class="bg-steel/50 border-l-4 border-secondary p-2 md:p-4 mb-3 md:mb-10 max-w-lg">
+                    <p class="text-secondary font-industrial text-sm md:text-lg">
+                        <span class="material-symbols-outlined text-secondary align-middle text-base md:text-xl">warning</span> Não é falta de ferramenta. Não é falta de experiência. <span class="text-white underline">É falta de método.</span>
                     </p>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start">
@@ -592,17 +444,17 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-5xl font-black mb-8 md:mb-12">O MERCADO MUDOU</h2>
             <div class="grid md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
-                <div class="monolith-card border-t-4 border-primary hover:-translate-y-2">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">CARROS EVOLUÍRAM</h3>
-                    <p class="text-zinc-400 text-sm md:text-base">Sistemas mecânicos agora são 100% eletrônicos e integrados.</p>
+                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">CARROS EVOLUÍRAM</h3>
+                    <p class="text-zinc-500 text-sm md:text-base">Sistemas mecânicos agora são 100% eletrônicos e integrados.</p>
                 </div>
-                <div class="monolith-card border-t-4 border-primary hover:-translate-y-2" style="transition-delay: 50ms;">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">SCANNER NÃO É TUDO</h3>
-                    <p class="text-zinc-400 text-sm md:text-base">O problema não é o scanner, é não saber o que fazer com ele.</p>
+                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">SCANNER NÃO É TUDO</h3>
+                    <p class="text-zinc-500 text-sm md:text-base">O problema não é o scanner, é não saber o que fazer com ele.</p>
                 </div>
-                <div class="monolith-card border-t-4 border-primary hover:-translate-y-2" style="transition-delay: 100ms;">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">SEM LUZ NO FIM</h3>
-                    <p class="text-zinc-400 text-sm md:text-base">Sem método, você trabalha no escuro e torce para dar certo.</p>
+                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
+                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">SEM LUZ NO FIM</h3>
+                    <p class="text-zinc-500 text-sm md:text-base">Sem método, você trabalha no escuro e torce para dar certo.</p>
                 </div>
             </div>
             <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero aprender o método certo</a>
@@ -634,7 +486,7 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
                     </ul>
                     <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero esse nível de domínio</a>
                 </div>
-                <div class="bg-surface p-4 border border-zinc-800/50 rounded-2xl backdrop-blur-sm shadow-2xl">
+                <div class="bg-surface p-2 border border-zinc-800">
                     <img src="assets/technical_blueprint_abs_1777226434804.png" class="w-full" alt="Diagnóstico" loading="lazy">
                 </div>
             </div>
@@ -679,16 +531,16 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
                 <h2 class="text-3xl md:text-5xl font-black">MAIS DE <span class="text-primary">120 AULAS</span> PRÁTICAS</h2>
                 <p class="text-zinc-400 mt-4 text-base md:text-xl italic">Aqui está o conhecimento que faz mecânico comum virar especialista</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">ABS COMPLETO</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">SENSORES (HALL/AMR)</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">SCANNER & PARÂMETROS</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">SISTEMA ESP</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">EPB (FREIO ELETRÔNICO)</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">REDE CAN</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">SISTEMAS ADAS</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">MÓDULO HIDRÁULICO</div>
-                <div class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-secondary col-span-2 md:col-span-4 hover:border-secondary/50 transition-colors">ESPECIAL MOTOS: ABS EM DUAS RODAS</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">ABS COMPLETO</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SENSORES (HALL/AMR)</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">SCANNER & PARÂMETROS</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMA ESP</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">EPB (FREIO ELETRÔNICO)</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">REDE CAN</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMAS ADAS</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">MÓDULO HIDRÁULICO</div>
+                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-secondary col-span-2 md:col-span-4">ESPECIAL MOTOS: ABS EM DUAS RODAS</div>
             </div>
             <div class="text-center mt-12">
                 <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero acesso às aulas</a>
@@ -700,31 +552,24 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
     <section class="py-16 md:py-24 bg-dark">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-5xl font-black text-center mb-8 md:mb-16">O DINHEIRO HOJE ESTÁ NO <span class="text-secondary italic">DIAGNÓSTICO</span></h2>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-zinc-950/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-zinc-800/50 shadow-xl transition-transform hover:-translate-y-2 duration-300">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-industrial mb-6 md:mb-8 tracking-widest">
-                        <span class="material-symbols-outlined text-sm">warning</span> SEM O MÉTODO
-                    </div>
+            <div class="grid md:grid-cols-2 gap-px bg-zinc-800 border border-zinc-800">
+                <div class="bg-zinc-950 p-6 md:p-12">
+                    <h3 class="text-lg md:text-2xl font-bold mb-4 md:mb-8 text-red-500 italic">SEM O MÉTODO</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span> Você trabalha inseguro</li>
-                        <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span> Perde tempo precioso</li>
-                        <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span> Perde dinheiro em peças</li>
-                        <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span> O cliente não confia 100%</li>
+                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Você trabalha inseguro</li>
+                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Perde tempo precioso</li>
+                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Perde dinheiro em peças</li>
+                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> O cliente não confia 100%</li>
                     </ul>
                 </div>
-                <div class="bg-zinc-900/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/30 shadow-[0_0_50px_rgba(239,26,45,0.15)] relative overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-500 font-industrial mb-6 md:mb-8 tracking-widest">
-                            <span class="material-symbols-outlined text-sm">verified</span> COM O MÉTODO
-                        </div>
-                        <ul class="space-y-4">
-                            <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span> Você domina o diagnóstico</li>
-                            <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span> Resolve com rapidez</li>
-                            <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span> Pode cobrar mais caro</li>
-                            <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span> Vira referência técnica</li>
-                        </ul>
-                    </div>
+                <div class="bg-zinc-900 p-6 md:p-12">
+                    <h3 class="text-lg md:text-2xl font-bold mb-4 md:mb-8 text-green-500 italic">COM O MÉTODO</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Você domina o diagnóstico</li>
+                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Resolve com rapidez</li>
+                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Pode cobrar mais caro</li>
+                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Vira referência técnica</li>
+                    </ul>
                 </div>
             </div>
             <div class="text-center mt-12">
@@ -805,51 +650,51 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
     <!-- DOBRA 12: BÔNUS -->
     <section class="py-16 md:py-24 bg-zinc-950">
         <div class="container mx-auto px-4 md:px-6 text-center">
-            <span class="text-secondary font-industrial tracking-[0.3em] text-sm mb-3 block drop-shadow-md">BÔNUS EXCLUSIVOS</span>
-            <h2 class="text-3xl md:text-5xl font-black mb-4 md:mb-6 italic glow-text">VOCÊ NÃO ENTRA <span class="text-primary">SOZINHO</span></h2>
+            <span class="text-secondary font-industrial tracking-[0.3em] text-sm mb-3 block">BÔNUS EXCLUSIVOS</span>
+            <h2 class="text-3xl md:text-5xl font-black mb-4 md:mb-6 italic">VOCÊ NÃO ENTRA <span class="text-primary">SOZINHO</span></h2>
             <p class="text-zinc-400 text-base md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto">Além do curso completo, você recebe <span class="text-secondary font-bold">R$ 847 em bônus</span> para acelerar seu resultado na oficina. <span class="text-white font-bold">100% GRÁTIS.</span></p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
-                <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
-                    <div class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">forum</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-2">SUPORTE VIP</h3>
-                    <p class="text-zinc-400 text-xs md:text-sm mb-3">Tire dúvidas direto com especialista no WhatsApp.</p>
-                    <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 197</p>
+                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
+                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">forum</span>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">SUPORTE VIP</h3>
+                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Tire dúvidas direto com especialista no WhatsApp.</p>
+                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 197</p>
                 </div>
-                <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
-                    <div class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">menu_book</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-2">APOSTILA COMPLETA</h3>
-                    <p class="text-zinc-400 text-xs md:text-sm mb-3">Material técnico detalhado para consulta na oficina.</p>
-                    <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 147</p>
+                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
+                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">menu_book</span>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">APOSTILA COMPLETA</h3>
+                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Material técnico detalhado para consulta na oficina.</p>
+                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 147</p>
                 </div>
-                <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
-                    <div class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">checklist</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-2">CHECKLIST</h3>
-                    <p class="text-zinc-400 text-xs md:text-sm mb-3">Passo a passo de diagnóstico para não errar mais.</p>
-                    <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 97</p>
+                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
+                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">checklist</span>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">CHECKLIST</h3>
+                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Passo a passo de diagnóstico para não errar mais.</p>
+                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 97</p>
                 </div>
-                <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
-                    <div class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">code</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-2">GUIA DE CÓDIGOS</h3>
-                    <p class="text-zinc-400 text-xs md:text-sm mb-3">Tabela completa de códigos de falha ABS/ESP.</p>
-                    <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 127</p>
+                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
+                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">code</span>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">GUIA DE CÓDIGOS</h3>
+                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Tabela completa de códigos de falha ABS/ESP.</p>
+                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 127</p>
                 </div>
-                <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8 hover:border-secondary/50" style="box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);">
-                    <div class="absolute -top-3 right-4 bg-secondary text-black shadow-lg text-xs font-black px-3 py-1 rounded-full">VITALÍCIO</div>
-                    <span class="material-symbols-outlined text-secondary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text-secondary">all_inclusive</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-2">ACESSO VITALÍCIO</h3>
-                    <p class="text-zinc-400 text-xs md:text-sm mb-3">O curso é seu para sempre. Sem mensalidade.</p>
-                    <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 279</p>
+                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
+                    <div class="absolute -top-3 right-3 bg-secondary text-black text-xs font-black px-2 py-0.5">VITALÍCIO</div>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">all_inclusive</span>
+                    <h3 class="text-sm md:text-base font-bold text-white mb-1">ACESSO VITALÍCIO</h3>
+                    <p class="text-zinc-500 text-xs md:text-sm mb-2">O curso é seu para sempre. Sem mensalidade.</p>
+                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 279</p>
                 </div>
             </div>
 
-            <div class="mt-10 md:mt-14 inline-flex items-center gap-4 bg-primary/5 border border-primary/20 px-8 py-4 rounded-2xl backdrop-blur-md shadow-[0_0_30px_rgba(239,26,45,0.1)]">
-                <span class="text-secondary font-black text-3xl md:text-4xl drop-shadow-lg">R$ 847</span>
-                <span class="text-zinc-400 text-sm md:text-base text-left border-l border-white/10 pl-4">em bônus inclusos<br><span class="text-white font-bold">sem custo adicional</span></span>
+            <div class="mt-10 md:mt-14 inline-flex items-center gap-3 bg-primary/10 border border-primary/20 px-6 py-3">
+                <span class="text-secondary font-black text-2xl md:text-3xl">R$ 847</span>
+                <span class="text-zinc-400 text-sm md:text-base">em bônus inclusos<br><span class="text-white font-bold">sem custo adicional</span></span>
             </div>
             
             <div class="mt-8">
@@ -863,15 +708,15 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-6xl font-black mb-8 md:mb-12">PRESTA ATENÇÃO <span class="text-secondary italic">NISSO:</span></h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8">
-                <div class="p-6 md:p-10 bg-red-950/20 border border-red-900/40 rounded-2xl backdrop-blur-md shadow-lg">
-                    <p class="text-red-500 font-industrial text-lg md:text-xl mb-2 md:mb-4 tracking-widest">ERRO DE DIAGNÓSTICO</p>
-                    <p class="text-2xl md:text-4xl font-black text-white mb-3 italic">PERDA DE R$ 1.000+</p>
-                    <p class="text-zinc-400 text-sm md:text-base">Peças trocadas errado e tempo perdido na oficina.</p>
+                <div class="p-4 md:p-8 bg-red-900/10 border border-red-900/30">
+                    <p class="text-red-500 font-industrial text-lg md:text-xl mb-2 md:mb-4">ERRO DE DIAGNÓSTICO</p>
+                    <p class="text-2xl md:text-4xl font-black text-white mb-2 italic">PERDA DE R$ 1.000+</p>
+                    <p class="text-zinc-500 text-sm md:text-base">Peças trocadas errado e tempo perdido na oficina.</p>
                 </div>
-                <div class="p-6 md:p-10 bg-green-950/20 border border-green-900/40 rounded-2xl backdrop-blur-md shadow-lg">
-                    <p class="text-green-500 font-industrial text-lg md:text-xl mb-2 md:mb-4 tracking-widest">MÉTODO MASTER</p>
-                    <p class="text-2xl md:text-4xl font-black text-white mb-3 italic">GANHO 5X MAIOR</p>
-                    <p class="text-zinc-400 text-sm md:text-base">Serviços premium que pagam o curso na primeira semana.</p>
+                <div class="p-4 md:p-8 bg-green-900/10 border border-green-900/30">
+                    <p class="text-green-500 font-industrial text-lg md:text-xl mb-2 md:mb-4">MÉTODO MASTER</p>
+                    <p class="text-2xl md:text-4xl font-black text-white mb-2 italic">GANHO 5X MAIOR</p>
+                    <p class="text-zinc-500 text-sm md:text-base">Serviços premium que pagam o curso na primeira semana.</p>
                 </div>
             </div>
             <p class="mt-6 md:mt-12 text-base md:text-xl text-zinc-400">Esse treinamento não é custo. É recuperação de prejuízo + aumento de faturamento.</p>
@@ -886,60 +731,60 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
             <!-- VALUE STACK -->
             <div class="max-w-3xl mx-auto text-center mb-12">
                 <span class="text-primary font-industrial tracking-[0.3em] text-sm mb-3 block">TUDO QUE VOCÊ RECEBE HOJE</span>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-2xl mt-0.5">play_circle</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">play_circle</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">120+ Aulas Práticas</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">ABS, ESP, EPB, Sensores, CAN, ADAS e MOTOS</p>
+                            <p class="text-white font-bold text-sm">120+ Aulas Práticas</p>
+                            <p class="text-zinc-500 text-xs">ABS, ESP, EPB, Sensores, CAN, ADAS e MOTOS</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-2xl mt-0.5">forum</span>
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">forum</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">Suporte VIP no WhatsApp</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">Tire dúvidas direto com especialista</p>
+                            <p class="text-white font-bold text-sm">Suporte VIP no WhatsApp</p>
+                            <p class="text-zinc-500 text-xs">Tire dúvidas direto com especialista</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-2xl mt-0.5">menu_book</span>
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">menu_book</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">Apostila + Checklist + Guia de Códigos</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">Material completo de consulta na oficina</p>
+                            <p class="text-white font-bold text-sm">Apostila + Checklist + Guia de Códigos</p>
+                            <p class="text-zinc-500 text-xs">Material completo de consulta na oficina</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-primary text-2xl mt-0.5">all_inclusive</span>
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">all_inclusive</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">Acesso Vitalício + Certificado</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">Curso seu para sempre, sem mensalidade</p>
+                            <p class="text-white font-bold text-sm">Acesso Vitalício + Certificado</p>
+                            <p class="text-zinc-500 text-xs">Curso seu para sempre, sem mensalidade</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">stars</span>
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-secondary text-xl mt-0.5">stars</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">R$ 847 em Bônus</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">Suporte VIP + Apostila + Checklist + Guia + Vitalício</p>
+                            <p class="text-white font-bold text-sm">R$ 847 em Bônus</p>
+                            <p class="text-zinc-500 text-xs">Suporte VIP + Apostila + Checklist + Guia + Vitalício</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
-                        <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">verified_user</span>
+                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
+                        <span class="material-symbols-outlined text-secondary text-xl mt-0.5">verified_user</span>
                         <div>
-                            <p class="text-white font-bold text-sm md:text-base">7 Dias de Garantia</p>
-                            <p class="text-zinc-400 text-xs md:text-sm mt-1">100% do dinheiro de volta se não gostar</p>
+                            <p class="text-white font-bold text-sm">7 Dias de Garantia</p>
+                            <p class="text-zinc-500 text-xs">100% do dinheiro de volta se não gostar</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- PRICE CARD -->
-            <div class="max-w-2xl mx-auto border border-primary/50 bg-zinc-900/80 backdrop-blur-xl relative rounded-3xl shadow-[0_20px_50px_rgba(239,26,45,0.15)] mt-12">
-                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-black px-8 py-2 rounded-full font-black text-sm md:text-base italic tracking-wide shadow-lg whitespace-nowrap">
-                    <span class="material-symbols-outlined align-middle mr-1">bolt</span> OFERTA ESPECIAL DE LANÇAMENTO
+            <div class="max-w-2xl mx-auto border-2 border-primary bg-zinc-900 relative">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-black px-6 py-1.5 font-black text-sm md:text-base italic tracking-wide">
+                    <span class="material-symbols-outlined align-middle">bolt</span> OFERTA ESPECIAL DE LANÇAMENTO
                 </div>
                 
-                <div class="p-8 md:p-12 text-center">
-                    <p class="text-zinc-400 text-sm md:text-base mb-2 font-medium">De <span class="line-through decoration-primary/50">R$ 1.690,00</span> por apenas</p>
+                <div class="p-6 md:p-10 text-center">
+                    <p class="text-zinc-500 text-sm md:text-base mb-1">De <span class="line-through">R$ 1.690,00</span> por apenas</p>
                     <div class="flex items-baseline justify-center gap-2 mb-1">
                         <span class="text-3xl md:text-5xl font-black text-zinc-500">R$</span>
                         <span class="text-7xl md:text-9xl font-black text-white glow-text italic leading-none">697</span>
@@ -947,20 +792,23 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
                     </div>
                     <p class="text-secondary font-industrial text-lg md:text-2xl mb-4">ou 12x de <span class="text-white font-black">R$ 69,70</span></p>
                     
-                    <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-6 py-3 rounded-full mb-8">
+                    <div class="inline-flex items-center gap-2 bg-green-900/20 border border-green-500/30 px-4 py-2 mb-6">
                         <span class="material-symbols-outlined text-green-500 text-lg">savings</span>
                         <p class="text-green-400 text-sm md:text-base font-bold">Você economiza <span class="text-white">R$ 993</span> — mais que o dobro do investimento</p>
                     </div>
                     
-                    <div class="flex flex-wrap items-center justify-center gap-4 mb-8 text-zinc-400 text-xs md:text-sm font-medium">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Compra segura via Hotmart</span>
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">credit_card</span> Parcele em até 12x</span>
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bolt</span> Acesso imediato</span>
+                    <div class="flex items-center justify-center gap-2 mb-6 text-zinc-600 text-xs">
+                        <span class="material-symbols-outlined text-sm">lock</span>
+                        Compra segura via Hotmart
+                        <span class="material-symbols-outlined text-sm">credit_card</span>
+                        Parcele em até 12x
+                        <span class="material-symbols-outlined text-sm">bolt</span>
+                        Acesso imediato
                     </div>
 
-                    <a href="javascript:void(0)" onclick="openCheckoutModal()" class="btn-industrial w-full text-lg md:text-2xl py-5 md:py-6 mb-6 btn-pulse font-black tracking-wider rounded-2xl shadow-[0_0_30px_rgba(239,26,45,0.3)] hover:shadow-[0_0_50px_rgba(239,26,45,0.5)]">
+                    <a href="javascript:void(0)" onclick="openCheckoutModal()" class="btn-industrial w-full text-lg md:text-3xl py-5 md:py-8 mb-5 btn-pulse font-black tracking-wider">
                         QUERO GARANTIR MINHA VAGA AGORA
-                        <span class="material-symbols-outlined text-2xl md:text-3xl ml-2">arrow_forward</span>
+                        <span class="material-symbols-outlined text-2xl md:text-4xl">arrow_forward</span>
                     </a>
                     
                     <p class="text-zinc-600 text-xs mb-6"><span class="material-symbols-outlined text-sm align-middle">trending_up</span> Mais de <span class="text-white font-bold">2.300 mecânicos</span> já transformaram sua oficina</p>
@@ -1033,7 +881,7 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-3xl md:text-7xl font-black mb-4 md:mb-8 italic">O MERCADO NÃO ESPERA</h2>
             <p class="text-lg md:text-2xl font-bold mb-6 md:mb-12 max-w-2xl mx-auto leading-tight">Ou você continua perdendo dinheiro e ficando para trás, ou você decide evoluir e faturar como um especialista hoje.</p>
-            <a href="#oferta" class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block btn-pulse border border-primary/30 rounded-2xl shadow-[0_0_40px_rgba(239,26,45,0.4)]">
+            <a href="#oferta" class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block btn-pulse">
                 QUERO DOMINAR O DIAGNÓSTICO E FATURAR MAIS AGORA
             </a>
         </div>
@@ -1158,20 +1006,6 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
             btn.disabled = false;
             btn.classList.remove('opacity-75', 'cursor-not-allowed');
         }
-    });
-</script>
-
-<!-- Mouse Tracking for Monolith Cards -->
-<script>
-    document.addEventListener("mousemove", (e) => {
-        document.querySelectorAll(".monolith-card").forEach((card) => {
-            const rect = card.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top;
-
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-        });
     });
 </script>
 
