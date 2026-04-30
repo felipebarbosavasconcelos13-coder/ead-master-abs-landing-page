@@ -565,23 +565,70 @@
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start">
+                        <!-- Mobile: scroll para o vídeo VSL -->
+                        <a href="#vsl-video"
+                            class="md:hidden btn-industrial hard-edge text-center text-base py-3 px-4 btn-pulse">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            Assistir apresentação completa
+                        </a>
+                        <!-- Desktop: scroll para oferta -->
                         <a href="#oferta"
-                            class="btn-industrial hard-edge text-center text-base md:text-xl py-3 px-4 md:py-5 md:px-10">
+                            class="hidden md:inline-flex btn-industrial hard-edge text-center text-xl py-5 px-10">
                             Quero dominar o diagnóstico de freios agora
                             <span class="material-symbols-outlined">trending_flat</span>
                         </a>
                     </div>
                 </div>
                 <div class="hidden md:block relative">
-                    <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                    <img src="assets/technical_blueprint_abs_1777226434804.png"
-                        class="relative z-10 w-full border border-white/10" alt="ABS Tech">
+                    <div class="absolute -inset-6 bg-primary/15 blur-3xl rounded-3xl"></div>
+                    <div class="relative z-10">
+                        <div class="video-container" style="border-color: rgba(239, 26, 45, 0.3); box-shadow: 0 30px 60px -15px rgba(239, 26, 45, 0.25);">
+                            <iframe id="vsl-desktop" src="https://www.youtube.com/embed/VIDEO_ID_AQUI?rel=0&modestbranding=1" style="border:0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen title="VSL - EAD Master ABS"></iframe>
+                        </div>
+                        <div class="mt-4 flex items-center justify-center gap-2 text-zinc-500 text-sm">
+                            <span class="material-symbols-outlined text-primary text-lg animate-pulse">fiber_manual_record</span>
+                            <span class="font-industrial tracking-wider">ASSISTA AGORA — VAGAS LIMITADAS</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- WARNING STRIPE -->
         <div class="warning-divider"></div>
+
+        <!-- VSL VIDEO SECTION (MOBILE ONLY) -->
+        <section id="vsl-video" class="py-10 pb-14 bg-dark md:hidden relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-6">
+                    <div class="feature-badge text-xs inline-flex mx-auto">
+                        <span class="material-symbols-outlined text-sm">play_circle</span>
+                        ASSISTA A APRESENTAÇÃO COMPLETA
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary/10 blur-2xl rounded-2xl"></div>
+                    <div class="relative video-container" style="border-color: rgba(239, 26, 45, 0.3); box-shadow: 0 20px 50px -10px rgba(239, 26, 45, 0.2);">
+                        <iframe id="vsl-mobile" src="https://www.youtube.com/embed/VIDEO_ID_AQUI?rel=0&modestbranding=1" style="border:0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen title="VSL - EAD Master ABS"></iframe>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <p class="text-zinc-500 text-sm mb-4 font-industrial tracking-wider">
+                        <span class="material-symbols-outlined text-primary text-sm align-middle animate-pulse">fiber_manual_record</span>
+                        VAGAS LIMITADAS — ASSISTA ATÉ O FINAL
+                    </p>
+                    <a href="#oferta" class="btn-industrial hard-edge text-base py-4 px-8 btn-pulse w-full">
+                        Quero garantir minha vaga agora
+                        <span class="material-symbols-outlined">trending_flat</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- DOBRA 2: IDENTIFICAÇÃO -->
         <section class="py-16 md:py-24 bg-dark">

@@ -1,94 +1,140 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Domine o diagnóstico de ABS, ESP e EPB com método direto. Curso EAD completo com 120+ aulas práticas para mecânicos. Pare de perder dinheiro na oficina.">
+    <meta name="description"
+        content="Domine o diagnóstico de ABS, ESP e EPB com método direto. Curso EAD completo com 120+ aulas práticas para mecânicos. Pare de perder dinheiro na oficina.">
     <meta property="og:title" content="EAD MASTER EM FREIOS ABS/ESP/EPB – CARROS E MOTOS – VERSÃO 360º">
-    <meta property="og:description" content="Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.">
+    <meta property="og:description"
+        content="Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EAD MASTER EM FREIOS ABS/ESP/EPB – VERSÃO 360º">
-    <meta name="twitter:description" content="Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.">
+    <meta name="twitter:description"
+        content="Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.">
     <link rel="canonical" href="https://eadmasterabs.com.br/">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EF1A2D'><path d='M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z'/></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EF1A2D'><path d='M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z'/></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Barlow+Condensed:wght@700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Barlow+Condensed:wght@700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap">
     <title>EAD MASTER EM FREIOS ABS/ESP/EPB – CARROS E MOTOS – VERSÃO 360º</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --primary: #EF1A2D; /* Crimson Red */
-            --primary-glow: rgba(239, 26, 45, 0.4);
-            --secondary: #FFD700; /* Safety Yellow */
-            --background: #0A0A0A;
-            --surface: #141414;
-            --steel: #2D2D2D;
+            --primary: #EF1A2D;
+            /* Crimson Red */
+            --primary-light: #FF4D5E;
+            --primary-glow: rgba(239, 26, 45, 0.6);
+            --secondary: #FACC15;
+            /* Safety Yellow */
+            --secondary-glow: rgba(250, 204, 21, 0.4);
+            --background: #050505;
+            --surface: rgba(24, 24, 27, 0.4);
+            --surface-hover: rgba(39, 39, 42, 0.6);
+            --steel: #27272A;
         }
 
         html {
             scroll-behavior: smooth;
         }
-        body { 
-            font-family: 'Inter', sans-serif; 
+
+        body {
+            font-family: 'Inter', sans-serif;
             background-color: var(--background);
-            color: #E0E0E0;
+            color: #E4E4E7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            position: relative;
         }
 
-        h1, h2, h3, .font-industrial { 
-            font-family: 'Barlow Condensed', sans-serif; 
+        /* Subtle Noise Overlay for Premium Feel */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-industrial {
+            font-family: 'Barlow Condensed', sans-serif;
             text-transform: uppercase;
-            letter-spacing: -0.02em;
+            letter-spacing: 0.03em;
         }
 
+        /* Premium Text Gradients */
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-light) 50%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Improved Carbon Pattern */
         .carbon-pattern {
-            background-image: linear-gradient(45deg, #111 25%, transparent 25%), 
-                              linear-gradient(-45deg, #111 25%, transparent 25%), 
-                              linear-gradient(45deg, transparent 75%, #111 75%), 
-                              linear-gradient(-45deg, transparent 75%, #111 75%);
-            background-size: 4px 4px;
-            background-color: #0A0A0A;
+            background-color: var(--background);
+            background-image:
+                radial-gradient(circle at 15% 50%, rgba(239, 26, 45, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(250, 204, 21, 0.05) 0%, transparent 50%),
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+            background-position: 0 0, 0 0, -1px -1px, -1px -1px;
         }
 
         .warning-divider {
-            height: 12px;
-            background: repeating-linear-gradient(
-                -45deg,
-                #000,
-                #000 10px,
-                var(--secondary) 10px,
-                var(--secondary) 20px
-            );
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            box-shadow: 0 0 20px var(--primary-glow);
+            opacity: 0.9;
         }
 
-        .hard-edge { border-radius: 0 !important; }
-        
+        .hard-edge {
+            border-radius: 8px !important;
+        }
+
+        /* Modern Button - Ultra Premium */
         .btn-industrial {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             position: relative;
-            background: var(--primary);
-            color: black;
-            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary) 0%, #900010 100%);
+            color: white;
+            font-weight: 800;
             padding: 1.25rem 2.5rem;
             text-transform: uppercase;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: none;
+            letter-spacing: 2px;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
             overflow: hidden;
             text-decoration: none;
-            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        .btn-industrial:hover {
-            background: #C41224;
-            box-shadow: 0 0 30px var(--primary-glow);
-            transform: translateY(-2px);
-            animation: none;
+            box-shadow: 0 10px 30px -10px var(--primary-glow), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+            z-index: 1;
         }
 
         .btn-industrial::after {
@@ -96,83 +142,178 @@
             position: absolute;
             top: 0;
             left: -100%;
-            width: 100%;
+            width: 50%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: skewX(-25deg);
+            transition: all 0.7s ease;
+            z-index: -1;
+        }
+
+        .btn-industrial:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 25px 50px -12px var(--primary-glow), inset 0 2px 0 rgba(255, 255, 255, 0.4);
+            background: linear-gradient(135deg, var(--primary-light) 0%, #B00015 100%);
+            border-color: rgba(255, 255, 255, 0.4);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .btn-industrial:hover::after {
-            left: 100%;
+            left: 200%;
         }
 
+        /* Glassmorphism Card - Framer Style */
         .monolith-card {
             background: var(--surface);
-            border: 1px solid #333;
-            padding: 2rem;
-            transition: all 0.3s ease;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            /* overflow: hidden; Removed to allow badges to escape */
+            transform-style: preserve-3d;
+        }
+
+        .monolith-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .monolith-card>* {
+            position: relative;
+            z-index: 1;
         }
 
         .monolith-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: rgba(239, 26, 45, 0.5);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 40px -10px var(--primary-glow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            background: var(--surface-hover);
+        }
+
+        .monolith-card:hover::before {
+            opacity: 1;
         }
 
         .glow-text {
-            text-shadow: 0 0 15px var(--primary-glow);
+            text-shadow: 0 0 40px var(--primary-glow);
+        }
+
+        .glow-text-secondary {
+            text-shadow: 0 0 40px var(--secondary-glow);
         }
 
         .check-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 16px;
             color: #A1A1AA;
+            padding: 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        .check-item span {
-            color: var(--primary);
-            font-weight: bold;
+        .check-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+            color: #fff;
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
         }
 
-        a:focus-visible, button:focus-visible, summary:focus-visible {
-            outline: 3px solid var(--primary);
-            outline-offset: 3px;
+        .check-item span.material-symbols-outlined {
+            color: var(--primary-light);
+            background: linear-gradient(135deg, rgba(239, 26, 45, 0.25), rgba(239, 26, 45, 0.05));
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(239, 26, 45, 0.3);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 15px rgba(239, 26, 45, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .gradient-border {
-            position: relative;
-            background: var(--surface);
-        }
-        
-        .gradient-border::before {
-            content: "";
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            z-index: -1;
+        .check-item:hover span.material-symbols-outlined {
+            transform: scale(1.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 20px rgba(239, 26, 45, 0.4);
+            color: #fff;
         }
 
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--primary-light);
+            outline-offset: 4px;
+            border-radius: 12px;
         }
+
+        /* Advanced Ambient Animations */
         @keyframes pulse-btn {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 var(--primary-glow); }
-            50% { transform: scale(1.04); box-shadow: 0 0 20px 10px rgba(239, 26, 45, 0.35); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 26, 45, 0.8);
+            }
+
+            50% {
+                box-shadow: 0 0 30px 20px rgba(239, 26, 45, 0.15);
+            }
         }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
         .btn-pulse {
-            animation: pulse-btn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse-btn 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+
         .btn-pulse:hover {
             animation: none;
         }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border: 1px solid #333;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
+
+        .video-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 40px 80px -20px rgba(239, 26, 45, 0.3);
+            border-color: rgba(239, 26, 45, 0.4);
+        }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -180,146 +321,184 @@
             width: 100%;
             height: 100%;
         }
+
+        /* Feature Badge - Enhanced */
+        .feature-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, rgba(239, 26, 45, 0.15), rgba(239, 26, 45, 0.05));
+            border: 1px solid rgba(239, 26, 45, 0.3);
+            border-radius: 9999px;
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 20px rgba(239, 26, 45, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Smooth Details Animation */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Ambient Background Blobs */
+        .ambient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+            animation: float 10s infinite alternate ease-in-out;
+        }
     </style>
-<script>
-console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Dericson Calari e Samuel Choairy', 'color: yellow; font-size: 20px;');
+    <script>
+        console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Dericson Calari e Samuel Choairy', 'color: yellow; font-size: 20px;');
 
-(function () {
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    function setCookie(cookieName, cookieValue, expirationTime) {
-        var cookiePath = "/";
-        expirationTime = expirationTime * 1000;
-        var date = new Date();
-        var dateTimeNow = date.getTime();
-        date.setTime(dateTimeNow + expirationTime);
-        var expirationDate = date.toUTCString();
-        document.cookie = cookieName + "=" + cookieValue + "; expires=" + expirationDate + "; path=" + cookiePath;
-    }
-
-    function getCookieValue(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
-
-    const adParams = ['fbclid', 'gclid'];
-
-    const urlParams = new URLSearchParams(window.location.search);
-    let isAdClick = false;
-    adParams.forEach(param => {
-        if (urlParams.has(param)) {
-            isAdClick = true;
-        }
-    });
-
-    if (isAdClick) {
-        const utmSource = getParameterByName('utm_source');
-        const utmMedium = getParameterByName('utm_medium');
-        const utmCampaign = getParameterByName('utm_campaign');
-        const utmContent = getParameterByName('utm_content');
-        const utmTerm = getParameterByName('utm_term');
-
-        if (utmSource) setCookie('cookieUtmSource', utmSource, 63072000);
-        if (utmMedium) setCookie('cookieUtmMedium', utmMedium, 63072000);
-        if (utmCampaign) setCookie('cookieUtmCampaign', utmCampaign, 63072000);
-        if (utmContent) setCookie('cookieUtmContent', utmContent, 63072000);
-        if (utmTerm) setCookie('cookieUtmTerm', utmTerm, 63072000);
-    }
-
-    let parametros = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-    const urlParamsCapt = new URLSearchParams(window.location.search);
-    const urlParamsCaptReferrer = new URLSearchParams(document.referrer.split('?')[1] || '');
-    let utms = {};
-
-    const cookieUtmSource = getCookieValue('cookieUtmSource');
-    const cookieUtmMedium = getCookieValue('cookieUtmMedium');
-    const cookieUtmCampaign = getCookieValue('cookieUtmCampaign');
-    const cookieUtmContent = getCookieValue('cookieUtmContent');
-    const cookieUtmTerm = getCookieValue('cookieUtmTerm');
-
-    parametros.forEach(el => {
-        if (el === "utm_source") {
-            utms[el] = urlParamsCapt.get(el) ?? (document.referrer ? (urlParamsCaptReferrer.get(el) ?? new URL(document.referrer).hostname) : "direto");
-        } else {
-            utms[el] = urlParamsCapt.get(el) ?? (urlParamsCaptReferrer.get(el) ?? "");
-        }
-    });
-
-    let scks = Object.values(utms).filter(value => value !== "");
-
-    let currentSckValues = [];
-    if (urlParamsCapt.get('sck')) {
-        currentSckValues = urlParamsCapt.get('sck').split('|');
-    }
-    scks = scks.filter(value => !currentSckValues.includes(value));
-
-    let srcValues = [cookieUtmSource, cookieUtmMedium, cookieUtmCampaign, cookieUtmContent, cookieUtmTerm].filter(value => value !== null && value !== "");
-
-    const updateLinks = (el, elURL) => {
-        const elSearchParams = new URLSearchParams(elURL.search);
-        let modified = false;
-
-        urlParams.forEach((value, key) => {
-            if (!elSearchParams.has(key)) {
-                elSearchParams.append(key, value);
-                modified = true;
+        (function () {
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
             }
-        });
 
-        for (let key in utms) {
-            if (!elSearchParams.has(key)) {
-                elSearchParams.append(key, utms[key]);
-                modified = true;
+            function setCookie(cookieName, cookieValue, expirationTime) {
+                var cookiePath = "/";
+                expirationTime = expirationTime * 1000;
+                var date = new Date();
+                var dateTimeNow = date.getTime();
+                date.setTime(dateTimeNow + expirationTime);
+                var expirationDate = date.toUTCString();
+                document.cookie = cookieName + "=" + cookieValue + "; expires=" + expirationDate + "; path=" + cookiePath;
             }
-        }
 
-        if (cookieUtmSource) elSearchParams.append('cookieUtmSource', cookieUtmSource);
-        if (cookieUtmMedium) elSearchParams.append('cookieUtmMedium', cookieUtmMedium);
-        if (cookieUtmCampaign) elSearchParams.append('cookieUtmCampaign', cookieUtmCampaign);
-        if (cookieUtmContent) elSearchParams.append('cookieUtmContent', cookieUtmContent);
-        if (cookieUtmTerm) elSearchParams.append('cookieUtmTerm', cookieUtmTerm);
-
-        if (!elSearchParams.has('sck') && scks.length > 0) {
-            elSearchParams.append('sck', scks.join('|'));
-            modified = true;
-        }
-
-        if (!elSearchParams.has('src') && srcValues.length > 0) {
-            elSearchParams.append('src', srcValues.join('|'));
-            modified = true;
-        }
-
-        if (modified) {
-            return elURL.origin + elURL.pathname + "?" + elSearchParams.toString();
-        }
-        return el.href;
-    };
-
-    document.querySelectorAll('a').forEach(el => {
-        try {
-            const elURL = new URL(el.href, window.location.origin);
-            if (!elURL.hash) {
-                el.href = updateLinks(el, elURL);
+            function getCookieValue(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+                return null;
             }
-        } catch (e) {
-            console.warn('Erro ao processar URL no link:', el.href);
-        }
-    });
 
-})();
-</script>
+            const adParams = ['fbclid', 'gclid'];
 
-<script>
+            const urlParams = new URLSearchParams(window.location.search);
+            let isAdClick = false;
+            adParams.forEach(param => {
+                if (urlParams.has(param)) {
+                    isAdClick = true;
+                }
+            });
+
+            if (isAdClick) {
+                const utmSource = getParameterByName('utm_source');
+                const utmMedium = getParameterByName('utm_medium');
+                const utmCampaign = getParameterByName('utm_campaign');
+                const utmContent = getParameterByName('utm_content');
+                const utmTerm = getParameterByName('utm_term');
+
+                if (utmSource) setCookie('cookieUtmSource', utmSource, 63072000);
+                if (utmMedium) setCookie('cookieUtmMedium', utmMedium, 63072000);
+                if (utmCampaign) setCookie('cookieUtmCampaign', utmCampaign, 63072000);
+                if (utmContent) setCookie('cookieUtmContent', utmContent, 63072000);
+                if (utmTerm) setCookie('cookieUtmTerm', utmTerm, 63072000);
+            }
+
+            let parametros = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+            const urlParamsCapt = new URLSearchParams(window.location.search);
+            const urlParamsCaptReferrer = new URLSearchParams(document.referrer.split('?')[1] || '');
+            let utms = {};
+
+            const cookieUtmSource = getCookieValue('cookieUtmSource');
+            const cookieUtmMedium = getCookieValue('cookieUtmMedium');
+            const cookieUtmCampaign = getCookieValue('cookieUtmCampaign');
+            const cookieUtmContent = getCookieValue('cookieUtmContent');
+            const cookieUtmTerm = getCookieValue('cookieUtmTerm');
+
+            parametros.forEach(el => {
+                if (el === "utm_source") {
+                    utms[el] = urlParamsCapt.get(el) ?? (document.referrer ? (urlParamsCaptReferrer.get(el) ?? new URL(document.referrer).hostname) : "direto");
+                } else {
+                    utms[el] = urlParamsCapt.get(el) ?? (urlParamsCaptReferrer.get(el) ?? "");
+                }
+            });
+
+            let scks = Object.values(utms).filter(value => value !== "");
+
+            let currentSckValues = [];
+            if (urlParamsCapt.get('sck')) {
+                currentSckValues = urlParamsCapt.get('sck').split('|');
+            }
+            scks = scks.filter(value => !currentSckValues.includes(value));
+
+            let srcValues = [cookieUtmSource, cookieUtmMedium, cookieUtmCampaign, cookieUtmContent, cookieUtmTerm].filter(value => value !== null && value !== "");
+
+            const updateLinks = (el, elURL) => {
+                const elSearchParams = new URLSearchParams(elURL.search);
+                let modified = false;
+
+                urlParams.forEach((value, key) => {
+                    if (!elSearchParams.has(key)) {
+                        elSearchParams.append(key, value);
+                        modified = true;
+                    }
+                });
+
+                for (let key in utms) {
+                    if (!elSearchParams.has(key)) {
+                        elSearchParams.append(key, utms[key]);
+                        modified = true;
+                    }
+                }
+
+                if (cookieUtmSource) elSearchParams.append('cookieUtmSource', cookieUtmSource);
+                if (cookieUtmMedium) elSearchParams.append('cookieUtmMedium', cookieUtmMedium);
+                if (cookieUtmCampaign) elSearchParams.append('cookieUtmCampaign', cookieUtmCampaign);
+                if (cookieUtmContent) elSearchParams.append('cookieUtmContent', cookieUtmContent);
+                if (cookieUtmTerm) elSearchParams.append('cookieUtmTerm', cookieUtmTerm);
+
+                if (!elSearchParams.has('sck') && scks.length > 0) {
+                    elSearchParams.append('sck', scks.join('|'));
+                    modified = true;
+                }
+
+                if (!elSearchParams.has('src') && srcValues.length > 0) {
+                    elSearchParams.append('src', srcValues.join('|'));
+                    modified = true;
+                }
+
+                if (modified) {
+                    return elURL.origin + elURL.pathname + "?" + elSearchParams.toString();
+                }
+                return el.href;
+            };
+
+            document.querySelectorAll('a').forEach(el => {
+                try {
+                    const elURL = new URL(el.href, window.location.origin);
+                    if (!elURL.hash) {
+                        el.href = updateLinks(el, elURL);
+                    }
+                } catch (e) {
+                    console.warn('Erro ao processar URL no link:', el.href);
+                }
+            });
+
+        })();
+    </script>
+
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -327,687 +506,921 @@ console.log('%cScript de rastreio 4.0 by Comunidade Nova Ordem do Digital - Deri
                     colors: {
                         primary: '#EF1A2D',
                         secondary: '#FFD700',
-                        dark: '#0A0A0A',
-                        steel: '#2D2D2D',
+                        dark: '#050505',
+                        steel: '#27272A',
                     }
                 }
             }
         }
     </script>
 </head>
+
 <body class="selection:bg-primary selection:text-white">
 
-<main>
-    <!-- WARNING TOP BAR -->
-    <div class="warning-divider"></div>
+    <main>
+        <!-- Ambient Background Blobs -->
+        <div class="ambient-blob bg-primary w-64 h-64 top-20 left-10"></div>
+        <div class="ambient-blob bg-secondary w-72 h-72 top-1/4 right-0" style="animation-delay: -2s;"></div>
+        <div class="ambient-blob bg-primary w-96 h-96 top-2/3 left-1/4" style="animation-delay: -5s;"></div>
 
-    <!-- DOBRA 1: IMPACTO -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden carbon-pattern">
-        <div class="absolute inset-0 z-0">
-            <img src="assets/workshop_hero_bg_1777226398277.png" class="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Workshop Background">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/50"></div>
-        </div>
+        <!-- WARNING TOP BAR -->
+        <div class="warning-divider"></div>
 
-        <div class="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-4 md:gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-1 md:gap-2 px-2 md:px-3 py-0.5 md:py-1 bg-primary/10 border border-primary/20 text-primary font-industrial text-xs md:text-sm mb-2 md:mb-6">
-                    <span class="material-symbols-outlined text-xs md:text-sm">precision_manufacturing</span>
-                    MÉTODO DIRETO E VALIDADO
-                </div>
-                <h1 class="text-3xl md:text-7xl font-black leading-tight md:leading-none mb-2 md:mb-6 glow-text italic uppercase">
-                    Pare de perder <span class="text-primary">dinheiro</span> na oficina por não saber diagnosticar ABS de carros e motos corretamente
-                </h1>
-                <p class="text-sm md:text-2xl text-zinc-400 max-w-xl mb-2 md:mb-6 font-light leading-snug md:leading-relaxed">
-                    Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em serviços de alto valor.
-                </p>
-                <div class="bg-steel/50 border-l-4 border-secondary p-2 md:p-4 mb-3 md:mb-10 max-w-lg">
-                    <p class="text-secondary font-industrial text-sm md:text-lg">
-                        <span class="material-symbols-outlined text-secondary align-middle text-base md:text-xl">warning</span> Não é falta de ferramenta. Não é falta de experiência. <span class="text-white underline">É falta de método.</span>
+        <!-- DOBRA 1: IMPACTO -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden carbon-pattern">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/workshop_hero_bg_1777226398277.png"
+                    class="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Workshop Background">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-dark/50"></div>
+            </div>
+
+            <div
+                class="container mx-auto px-4 md:px-6 relative z-10 text-center md:text-left grid md:grid-cols-2 gap-4 md:gap-12 items-center">
+                <div>
+                    <div class="feature-badge mb-4 md:mb-8 animate-float" style="animation-duration: 4s;">
+                        <span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+                        MÉTODO DIRETO E VALIDADO
+                    </div>
+                    <h1
+                        class="text-3xl md:text-5xl lg:text-6xl font-black leading-tight mb-4 md:mb-6 text-gradient italic uppercase drop-shadow-2xl">
+                        Pare de perder <span class="text-gradient-primary glow-text">dinheiro</span> na oficina por não
+                        saber diagnosticar ABS de carros e motos corretamente
+                    </h1>
+                    <p
+                        class="text-base md:text-lg lg:text-xl text-zinc-400 max-w-xl mb-6 md:mb-8 font-light leading-relaxed">
+                        Domine o diagnóstico de ABS, ESP e EPB com um método direto e transforme falhas complexas em
+                        serviços de alto valor.
                     </p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start">
-                    <a href="#oferta" class="btn-industrial hard-edge text-center text-base md:text-xl py-3 px-4 md:py-5 md:px-10">
-                        Quero dominar o diagnóstico de freios agora
-                        <span class="material-symbols-outlined">trending_flat</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hidden md:block relative">
-                <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                <img src="assets/technical_blueprint_abs_1777226434804.png" class="relative z-10 w-full border border-white/10" alt="ABS Tech">
-            </div>
-        </div>
-    </section>
-
-    <!-- WARNING STRIPE -->
-    <div class="warning-divider"></div>
-
-    <!-- DOBRA 2: IDENTIFICAÇÃO -->
-    <section class="py-16 md:py-24 bg-dark">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-6xl font-black mb-8 md:mb-16">SEJA SINCERO:</h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="monolith-card">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4">search_off</span>
-                    <p class="text-lg">Já pegou um carro ou uma moto com luz de ABS acesa e ficou perdido?</p>
-                </div>
-                <div class="monolith-card">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4">history</span>
-                    <p class="text-lg">Já trocou peça e o erro voltou?</p>
-                </div>
-                <div class="monolith-card">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4">person_off</span>
-                    <p class="text-lg">Já travou na frente do cliente sem saber explicar?</p>
-                </div>
-                <div class="monolith-card">
-                    <span class="material-symbols-outlined text-primary text-4xl mb-4">timer_off</span>
-                    <p class="text-lg">Já perdeu serviço porque outro resolveu mais rápido?</p>
-                </div>
-            </div>
-            <div class="mt-8 md:mt-16 max-w-3xl mx-auto p-4 md:p-8 bg-zinc-900 border border-zinc-800">
-                <p class="text-lg md:text-2xl text-zinc-400">Isso não é azar. <span class="text-white font-bold italic">É padrão de quem não tem método.</span></p>
-                <a href="#oferta" class="btn-industrial mt-4 md:mt-8">Eu não quero mais passar por isso</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 3: DOR + PERDA -->
-    <section class="py-16 md:py-24 carbon-pattern">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">CADA ERRO NO DIAGNÓSTICO <span class="text-primary italic">CUSTA:</span></h2>
-                <div class="space-y-2 md:space-y-4 mb-6 md:mb-12">
-                    <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
-                        <span class="text-primary">01.</span> DINHEIRO
+                    <div
+                        class="bg-surface border-l-4 border-secondary p-4 md:p-6 mb-6 md:mb-10 max-w-xl rounded-r-2xl backdrop-blur-lg shadow-xl shadow-black/50 relative overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent pointer-events-none">
+                        </div>
+                        <p class="text-secondary font-industrial text-base md:text-lg tracking-wide relative z-10">
+                            <span
+                                class="material-symbols-outlined text-secondary align-middle text-xl md:text-2xl mr-2 glow-text-secondary">warning</span>
+                            Não é falta de ferramenta. Não é falta de experiência.<br><span
+                                class="text-white underline decoration-primary decoration-2 underline-offset-4 mt-2 inline-block">É
+                                falta de método.</span>
+                        </p>
                     </div>
-                    <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
-                        <span class="text-primary">02.</span> TEMPO
-                    </div>
-                    <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
-                        <span class="text-primary">03.</span> REPUTAÇÃO
+                    <div class="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center md:justify-start">
+                        <a href="#oferta"
+                            class="btn-industrial hard-edge text-center text-base md:text-xl py-3 px-4 md:py-5 md:px-10">
+                            Quero dominar o diagnóstico de freios agora
+                            <span class="material-symbols-outlined">trending_flat</span>
+                        </a>
                     </div>
                 </div>
-                <p class="text-base md:text-xl text-zinc-400 mb-4 md:mb-8">
-                    E tem algo pior: Você começa a evitar carros mais modernos porque sabe que pode dar problema. Enquanto isso, outros mecânicos estão faturando alto justamente nesses serviços que você evita.
-                </p>
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero parar de perder dinheiro</a>
+                <div class="hidden md:block relative">
+                    <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
+                    <img src="assets/technical_blueprint_abs_1777226434804.png"
+                        class="relative z-10 w-full border border-white/10" alt="ABS Tech">
+                </div>
             </div>
-            <div class="relative">
-                <img src="assets/mechanic_master_scene_1777226418380.png" class="w-full grayscale brightness-50" alt="Mecânico Preocupado" loading="lazy">
-                <div class="absolute inset-0 bg-primary/10 mix-blend-color"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DOBRA 4: REVELAÇÃO -->
-    <section class="py-16 md:py-24 bg-zinc-950 text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black mb-8 md:mb-12">O MERCADO MUDOU</h2>
-            <div class="grid md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
-                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">CARROS EVOLUÍRAM</h3>
-                    <p class="text-zinc-500 text-sm md:text-base">Sistemas mecânicos agora são 100% eletrônicos e integrados.</p>
-                </div>
-                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">SCANNER NÃO É TUDO</h3>
-                    <p class="text-zinc-500 text-sm md:text-base">O problema não é o scanner, é não saber o que fazer com ele.</p>
-                </div>
-                <div class="p-4 md:p-8 border-b-4 border-primary bg-zinc-900">
-                    <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic">SEM LUZ NO FIM</h3>
-                    <p class="text-zinc-500 text-sm md:text-base">Sem método, você trabalha no escuro e torce para dar certo.</p>
-                </div>
-            </div>
-            <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero aprender o método certo</a>
-        </div>
-    </section>
+        <!-- WARNING STRIPE -->
+        <div class="warning-divider"></div>
 
-    <!-- DOBRA 5: SOLUÇÃO -->
-    <section class="py-16 md:py-24 bg-dark relative">
-        <div class="container mx-auto px-6 text-center">
-            <span class="text-primary font-industrial tracking-[0.3em] mb-4 block text-xs md:text-sm">APRESENTANDO:</span>
-            <h2 class="text-3xl md:text-8xl font-black mb-4 md:mb-8 italic">EAD MASTER EM FREIOS <br> <span class="text-secondary">ABS/ESP/EPB – VERSÃO 360º</span></h2>
-            <p class="text-base md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-6 md:mb-12">Um treinamento criado para te tirar do achismo e te colocar no controle total do diagnóstico. Você aprende o que aplicar direto na oficina.</p>
-            <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero entrar no EAD Master</a>
-        </div>
-    </section>
-
-    <!-- DOBRA 6: PROMESSA -->
-    <section class="py-16 md:py-24 carbon-pattern">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-3xl md:text-5xl font-black">AQUI VOCÊ APRENDE A:</h2>
-                    <ul class="space-y-3 md:space-y-6">
-                        <li class="check-item text-base md:text-xl"><span class="material-symbols-outlined text-primary text-base md:text-lg">check</span> Diagnosticar com precisão</li>
-                        <li class="check-item text-base md:text-xl"><span class="material-symbols-outlined text-primary text-base md:text-lg">check</span> Interpretar qualquer código de falha</li>
-                        <li class="check-item text-base md:text-xl"><span class="material-symbols-outlined text-primary text-base md:text-lg">check</span> Parar de trocar peça sem necessidade</li>
-                        <li class="check-item text-base md:text-xl"><span class="material-symbols-outlined text-primary text-base md:text-lg">check</span> Resolver problemas que outros não conseguem</li>
-                        <li class="check-item text-base md:text-xl"><span class="material-symbols-outlined text-primary text-base md:text-lg">check</span> E transformar isso em faturamento</li>
-                    </ul>
-                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero esse nível de domínio</a>
-                </div>
-                <div class="bg-surface p-2 border border-zinc-800">
-                    <img src="assets/technical_blueprint_abs_1777226434804.png" class="w-full" alt="Diagnóstico" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 7: MÉTODO -->
-    <section class="py-16 md:py-24 bg-dark">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-8 md:mb-16">MÉTODO <span class="text-primary italic">VALIDADO</span></h2>
-            <div class="grid md:grid-cols-4 gap-2 md:gap-4">
-                <div class="monolith-card border-t-4 border-primary">
-                    <div class="text-4xl font-black mb-4 text-zinc-700">01</div>
-                    <h3 class="text-base md:text-xl font-bold mb-2">ENTENDER</h3>
-                    <p class="text-zinc-500 text-sm">Entenda o funcionamento real do sistema eletrônico.</p>
-                </div>
-                <div class="monolith-card border-t-4 border-primary">
-                    <div class="text-4xl font-black mb-4 text-zinc-700">02</div>
-                    <h3 class="text-base md:text-xl font-bold mb-2">LER</h3>
-                    <p class="text-zinc-500 text-sm">Leia e interprete o scanner da maneira correta.</p>
-                </div>
-                <div class="monolith-card border-t-4 border-primary">
-                    <div class="text-4xl font-black mb-4 text-zinc-700">03</div>
-                    <h3 class="text-base md:text-xl font-bold mb-2">DIAGNOSTICAR</h3>
-                    <p class="text-zinc-500 text-sm">Siga o passo a passo lógico para isolar a falha.</p>
-                </div>
-                <div class="monolith-card border-t-4 border-primary">
-                    <div class="text-4xl font-black mb-4 text-zinc-700">04</div>
-                    <h3 class="text-base md:text-xl font-bold mb-2">EXECUTAR</h3>
-                    <p class="text-zinc-500 text-sm">Execute o reparo sem medo de retorno ou prejuízo.</p>
-                </div>
-            </div>
-            <p class="mt-6 md:mt-12 text-lg md:text-2xl italic text-secondary">Isso elimina a maior dor da oficina: INCERTEZA.</p>
-            <a href="#oferta" class="btn-industrial text-base md:text-lg mt-8">Quero seguir esse método</a>
-        </div>
-    </section>
-
-    <!-- DOBRA 8: CONTEÚDO -->
-    <section class="py-16 md:py-24 carbon-pattern">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-black">MAIS DE <span class="text-primary">120 AULAS</span> PRÁTICAS</h2>
-                <p class="text-zinc-400 mt-4 text-base md:text-xl italic">Aqui está o conhecimento que faz mecânico comum virar especialista</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">ABS COMPLETO</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SENSORES (HALL/AMR)</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">SCANNER & PARÂMETROS</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMA ESP</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">EPB (FREIO ELETRÔNICO)</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">REDE CAN</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-primary">SISTEMAS ADAS</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg">MÓDULO HIDRÁULICO</div>
-                <div class="p-6 bg-surface border border-zinc-800 text-center font-industrial text-lg text-secondary col-span-2 md:col-span-4">ESPECIAL MOTOS: ABS EM DUAS RODAS</div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero acesso às aulas</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 9 & 10: OPORTUNIDADE + TRANSFORMAÇÃO -->
-    <section class="py-16 md:py-24 bg-dark">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-5xl font-black text-center mb-8 md:mb-16">O DINHEIRO HOJE ESTÁ NO <span class="text-secondary italic">DIAGNÓSTICO</span></h2>
-            <div class="grid md:grid-cols-2 gap-px bg-zinc-800 border border-zinc-800">
-                <div class="bg-zinc-950 p-6 md:p-12">
-                    <h3 class="text-lg md:text-2xl font-bold mb-4 md:mb-8 text-red-500 italic">SEM O MÉTODO</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Você trabalha inseguro</li>
-                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Perde tempo precioso</li>
-                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> Perde dinheiro em peças</li>
-                        <li class="flex items-center gap-3 text-zinc-500 text-base md:text-lg"><span class="material-symbols-outlined text-red-500">close</span> O cliente não confia 100%</li>
-                    </ul>
-                </div>
-                <div class="bg-zinc-900 p-6 md:p-12">
-                    <h3 class="text-lg md:text-2xl font-bold mb-4 md:mb-8 text-green-500 italic">COM O MÉTODO</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Você domina o diagnóstico</li>
-                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Resolve com rapidez</li>
-                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Pode cobrar mais caro</li>
-                        <li class="flex items-center gap-3 text-zinc-300 text-base md:text-lg"><span class="material-symbols-outlined text-green-500">check</span> Vira referência técnica</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero essa transformação</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 11: AUTORIDADE -->
-    <section class="py-16 md:py-24 carbon-pattern">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-6 md:gap-16 items-center">
-            <div class="relative">
-                <div class="absolute -inset-4 bg-primary/20 blur-2xl"></div>
-                <img src="assets/mechanic_master_scene_1777226418380.png" class="relative z-10 grayscale border border-white/10" alt="Alex Tadeu" loading="lazy">
-            </div>
-            <div>
-                <span class="text-primary font-industrial mb-2 block text-xs md:text-sm">SEU INSTRUTOR</span>
-                <h2 class="text-3xl md:text-6xl font-black mb-3 md:mb-6 italic">ALEX TADEU</h2>
-                <p class="text-lg md:text-2xl text-zinc-300 mb-3 md:mb-6 font-light">Especialista em diagnóstico automotivo focado em ensino prático.</p>
-                <p class="text-zinc-500 text-sm md:text-lg leading-relaxed mb-4 md:mb-8">
-                    Formando mecânicos que hoje faturam mais. Aqui não é teoria de sala de aula, é a pura prática do dia a dia da oficina. Aprendizado direto no campo de batalha para quem quer resultado imediato.
-                </p>
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero aprender com quem faz</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA DE PROVA SOCIAL: DEPOIMENTOS -->
-    <section class="py-16 md:py-24 bg-dark">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-primary font-industrial tracking-[0.3em] mb-4 block text-xs md:text-sm">PROVA REAL</span>
-                <h2 class="text-3xl md:text-6xl font-black italic">RESULTADOS DE QUEM <span class="text-secondary">ESTÁ NO CAMPO DE BATALHA</span></h2>
-                <p class="text-zinc-500 mt-4 text-base md:text-xl">Veja o depoimento de alunos que transformaram suas oficinas com o EAD Master.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- VÍDEO 1 -->
-                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Depoimento de aluno 01"></iframe>
+        <!-- DOBRA 2: IDENTIFICAÇÃO -->
+        <section class="py-16 md:py-24 bg-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-6xl font-black mb-8 md:mb-16">SEJA SINCERO:</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="monolith-card">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">search_off</span>
+                        <p class="text-lg">Já pegou um carro ou uma moto com luz de ABS acesa e ficou perdido?</p>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg md:text-xl text-white">Aluno 01 - Nome/Oficina</h3>
-                        <p class="text-zinc-500 text-sm">"Resolvi um ABS que estava parado há 15 dias em 2 horas."</p>
+                    <div class="monolith-card">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">history</span>
+                        <p class="text-lg">Já trocou peça e o erro voltou?</p>
+                    </div>
+                    <div class="monolith-card">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">person_off</span>
+                        <p class="text-lg">Já travou na frente do cliente sem saber explicar?</p>
+                    </div>
+                    <div class="monolith-card">
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">timer_off</span>
+                        <p class="text-lg">Já perdeu serviço porque outro resolveu mais rápido?</p>
                     </div>
                 </div>
-
-                <!-- VÍDEO 2 -->
-                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Depoimento de aluno 02"></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg md:text-xl text-white">Aluno 02 - Nome/Oficina</h3>
-                        <p class="text-zinc-500 text-sm">"O curso se pagou na primeira semana de aplicação."</p>
-                    </div>
-                </div>
-
-                <!-- VÍDEO 3 -->
-                <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="Depoimento de aluno 03"></iframe>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold text-lg md:text-xl text-white">Aluno 03 - Nome/Oficina</h3>
-                        <p class="text-zinc-500 text-sm">"Suporte nota 10, me ajudou em um diagnóstico complexo."</p>
-                    </div>
+                <div class="mt-8 md:mt-16 max-w-3xl mx-auto p-4 md:p-8 bg-zinc-900 border border-zinc-800">
+                    <p class="text-lg md:text-2xl text-zinc-400">Isso não é azar. <span
+                            class="text-white font-bold italic">É padrão de quem não tem método.</span></p>
+                    <a href="#oferta" class="btn-industrial mt-4 md:mt-8">Eu não quero mais passar por isso</a>
                 </div>
             </div>
+        </section>
 
-            <div class="text-center mt-12">
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero ter esses resultados também</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 12: BÔNUS -->
-    <section class="py-16 md:py-24 bg-zinc-950">
-        <div class="container mx-auto px-4 md:px-6 text-center">
-            <span class="text-secondary font-industrial tracking-[0.3em] text-sm mb-3 block">BÔNUS EXCLUSIVOS</span>
-            <h2 class="text-3xl md:text-5xl font-black mb-4 md:mb-6 italic">VOCÊ NÃO ENTRA <span class="text-primary">SOZINHO</span></h2>
-            <p class="text-zinc-400 text-base md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto">Além do curso completo, você recebe <span class="text-secondary font-bold">R$ 847 em bônus</span> para acelerar seu resultado na oficina. <span class="text-white font-bold">100% GRÁTIS.</span></p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
-                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
-                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">forum</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-1">SUPORTE VIP</h3>
-                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Tire dúvidas direto com especialista no WhatsApp.</p>
-                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 197</p>
-                </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
-                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">menu_book</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-1">APOSTILA COMPLETA</h3>
-                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Material técnico detalhado para consulta na oficina.</p>
-                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 147</p>
-                </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
-                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">checklist</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-1">CHECKLIST</h3>
-                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Passo a passo de diagnóstico para não errar mais.</p>
-                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 97</p>
-                </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
-                    <div class="absolute -top-3 right-3 bg-primary text-black text-xs font-black px-2 py-0.5">GRÁTIS</div>
-                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">code</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-1">GUIA DE CÓDIGOS</h3>
-                    <p class="text-zinc-500 text-xs md:text-sm mb-2">Tabela completa de códigos de falha ABS/ESP.</p>
-                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 127</p>
-                </div>
-                <div class="bg-zinc-900 border border-zinc-800 p-5 text-left relative group hover:border-primary transition-colors">
-                    <div class="absolute -top-3 right-3 bg-secondary text-black text-xs font-black px-2 py-0.5">VITALÍCIO</div>
-                    <span class="material-symbols-outlined text-primary text-3xl mb-3 block">all_inclusive</span>
-                    <h3 class="text-sm md:text-base font-bold text-white mb-1">ACESSO VITALÍCIO</h3>
-                    <p class="text-zinc-500 text-xs md:text-sm mb-2">O curso é seu para sempre. Sem mensalidade.</p>
-                    <p class="text-zinc-700 text-xs md:text-sm line-through">R$ 279</p>
-                </div>
-            </div>
-
-            <div class="mt-10 md:mt-14 inline-flex items-center gap-3 bg-primary/10 border border-primary/20 px-6 py-3">
-                <span class="text-secondary font-black text-2xl md:text-3xl">R$ 847</span>
-                <span class="text-zinc-400 text-sm md:text-base">em bônus inclusos<br><span class="text-white font-bold">sem custo adicional</span></span>
-            </div>
-            
-            <div class="mt-8">
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero todos os bônus</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOBRA 13: ANCORAGEM -->
-    <section class="py-16 md:py-24 carbon-pattern text-center border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-6xl font-black mb-8 md:mb-12">PRESTA ATENÇÃO <span class="text-secondary italic">NISSO:</span></h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8">
-                <div class="p-4 md:p-8 bg-red-900/10 border border-red-900/30">
-                    <p class="text-red-500 font-industrial text-lg md:text-xl mb-2 md:mb-4">ERRO DE DIAGNÓSTICO</p>
-                    <p class="text-2xl md:text-4xl font-black text-white mb-2 italic">PERDA DE R$ 1.000+</p>
-                    <p class="text-zinc-500 text-sm md:text-base">Peças trocadas errado e tempo perdido na oficina.</p>
-                </div>
-                <div class="p-4 md:p-8 bg-green-900/10 border border-green-900/30">
-                    <p class="text-green-500 font-industrial text-lg md:text-xl mb-2 md:mb-4">MÉTODO MASTER</p>
-                    <p class="text-2xl md:text-4xl font-black text-white mb-2 italic">GANHO 5X MAIOR</p>
-                    <p class="text-zinc-500 text-sm md:text-base">Serviços premium que pagam o curso na primeira semana.</p>
-                </div>
-            </div>
-            <p class="mt-6 md:mt-12 text-base md:text-xl text-zinc-400">Esse treinamento não é custo. É recuperação de prejuízo + aumento de faturamento.</p>
-        </div>
-    </section>
-
-    <!-- DOBRA 14 & 15: OFERTA + GARANTIA -->
-    <section id="oferta" class="py-16 md:py-24 bg-dark relative overflow-hidden">
-        <div class="absolute inset-0 bg-primary/3"></div>
-        <div class="container mx-auto px-4 md:px-6 relative z-10">
-            
-            <!-- VALUE STACK -->
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <span class="text-primary font-industrial tracking-[0.3em] text-sm mb-3 block">TUDO QUE VOCÊ RECEBE HOJE</span>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">play_circle</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">120+ Aulas Práticas</p>
-                            <p class="text-zinc-500 text-xs">ABS, ESP, EPB, Sensores, CAN, ADAS e MOTOS</p>
+        <!-- DOBRA 3: DOR + PERDA -->
+        <section class="py-16 md:py-24 carbon-pattern">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">CADA ERRO NO DIAGNÓSTICO <span
+                            class="text-primary italic">CUSTA:</span></h2>
+                    <div class="space-y-2 md:space-y-4 mb-6 md:mb-12">
+                        <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
+                            <span class="text-primary">01.</span> DINHEIRO
+                        </div>
+                        <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
+                            <span class="text-primary">02.</span> TEMPO
+                        </div>
+                        <div class="flex items-center gap-4 text-xl md:text-3xl font-industrial text-zinc-500">
+                            <span class="text-primary">03.</span> REPUTAÇÃO
                         </div>
                     </div>
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">forum</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">Suporte VIP no WhatsApp</p>
-                            <p class="text-zinc-500 text-xs">Tire dúvidas direto com especialista</p>
-                        </div>
+                    <p class="text-base md:text-xl text-zinc-400 mb-4 md:mb-8">
+                        E tem algo pior: Você começa a evitar carros mais modernos porque sabe que pode dar problema.
+                        Enquanto isso, outros mecânicos estão faturando alto justamente nesses serviços que você evita.
+                    </p>
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero parar de perder dinheiro</a>
+                </div>
+                <div class="relative">
+                    <img src="assets/mechanic_master_scene_1777226418380.png" class="w-full grayscale brightness-50"
+                        alt="Mecânico Preocupado" loading="lazy">
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-color"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 4: REVELAÇÃO -->
+        <section class="py-16 md:py-24 bg-zinc-950 text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-black mb-8 md:mb-12">O MERCADO MUDOU</h2>
+                <div class="grid md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
+                    <div class="monolith-card border-t-4 border-primary hover:-translate-y-2">
+                        <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">CARROS EVOLUÍRAM</h3>
+                        <p class="text-zinc-400 text-sm md:text-base">Sistemas mecânicos agora são 100% eletrônicos e
+                            integrados.</p>
                     </div>
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">menu_book</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">Apostila + Checklist + Guia de Códigos</p>
-                            <p class="text-zinc-500 text-xs">Material completo de consulta na oficina</p>
-                        </div>
+                    <div class="monolith-card border-t-4 border-primary hover:-translate-y-2"
+                        style="transition-delay: 50ms;">
+                        <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">SCANNER NÃO É TUDO</h3>
+                        <p class="text-zinc-400 text-sm md:text-base">O problema não é o scanner, é não saber o que
+                            fazer com ele.</p>
                     </div>
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-primary text-xl mt-0.5">all_inclusive</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">Acesso Vitalício + Certificado</p>
-                            <p class="text-zinc-500 text-xs">Curso seu para sempre, sem mensalidade</p>
-                        </div>
+                    <div class="monolith-card border-t-4 border-primary hover:-translate-y-2"
+                        style="transition-delay: 100ms;">
+                        <h3 class="text-lg md:text-2xl font-bold mb-2 md:mb-4 italic text-white">SEM LUZ NO FIM</h3>
+                        <p class="text-zinc-400 text-sm md:text-base">Sem método, você trabalha no escuro e torce para
+                            dar certo.</p>
                     </div>
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-secondary text-xl mt-0.5">stars</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">R$ 847 em Bônus</p>
-                            <p class="text-zinc-500 text-xs">Suporte VIP + Apostila + Checklist + Guia + Vitalício</p>
-                        </div>
+                </div>
+                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero aprender o método certo</a>
+            </div>
+        </section>
+
+        <!-- DOBRA 5: SOLUÇÃO -->
+        <section class="py-16 md:py-24 bg-dark relative">
+            <div class="container mx-auto px-6 text-center">
+                <span
+                    class="text-primary font-industrial tracking-[0.3em] mb-4 block text-xs md:text-sm">APRESENTANDO:</span>
+                <h2 class="text-3xl md:text-8xl font-black mb-4 md:mb-8 italic">EAD MASTER EM FREIOS <br> <span
+                        class="text-secondary">ABS/ESP/EPB – VERSÃO 360º</span></h2>
+                <p class="text-base md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-6 md:mb-12">Um treinamento criado
+                    para te tirar do achismo e te colocar no controle total do diagnóstico. Você aprende o que aplicar
+                    direto na oficina.</p>
+                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero entrar no EAD Master</a>
+            </div>
+        </section>
+
+        <!-- DOBRA 6: PROMESSA -->
+        <section class="py-16 md:py-24 carbon-pattern">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-3xl md:text-5xl font-black">AQUI VOCÊ APRENDE A:</h2>
+                        <ul class="space-y-3 md:space-y-6">
+                            <li class="check-item text-base md:text-xl"><span
+                                    class="material-symbols-outlined text-primary text-base md:text-lg">check</span>
+                                Diagnosticar com precisão</li>
+                            <li class="check-item text-base md:text-xl"><span
+                                    class="material-symbols-outlined text-primary text-base md:text-lg">check</span>
+                                Interpretar qualquer código de falha</li>
+                            <li class="check-item text-base md:text-xl"><span
+                                    class="material-symbols-outlined text-primary text-base md:text-lg">check</span>
+                                Parar de trocar peça sem necessidade</li>
+                            <li class="check-item text-base md:text-xl"><span
+                                    class="material-symbols-outlined text-primary text-base md:text-lg">check</span>
+                                Resolver problemas que outros não conseguem</li>
+                            <li class="check-item text-base md:text-xl"><span
+                                    class="material-symbols-outlined text-primary text-base md:text-lg">check</span> E
+                                transformar isso em faturamento</li>
+                        </ul>
+                        <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero esse nível de domínio</a>
                     </div>
-                    <div class="flex items-start gap-3 bg-zinc-900/80 border border-zinc-800 p-3">
-                        <span class="material-symbols-outlined text-secondary text-xl mt-0.5">verified_user</span>
-                        <div>
-                            <p class="text-white font-bold text-sm">7 Dias de Garantia</p>
-                            <p class="text-zinc-500 text-xs">100% do dinheiro de volta se não gostar</p>
+                    <div class="bg-surface p-4 border border-zinc-800/50 rounded-2xl backdrop-blur-sm shadow-2xl">
+                        <img src="assets/technical_blueprint_abs_1777226434804.png" class="w-full" alt="Diagnóstico"
+                            loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 7: MÉTODO -->
+        <section class="py-16 md:py-24 bg-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-black mb-8 md:mb-16">MÉTODO <span
+                        class="text-primary italic">VALIDADO</span></h2>
+                <div class="grid md:grid-cols-4 gap-2 md:gap-4">
+                    <div class="monolith-card border-t-4 border-primary">
+                        <div class="text-4xl font-black mb-4 text-zinc-700">01</div>
+                        <h3 class="text-base md:text-xl font-bold mb-2">ENTENDER</h3>
+                        <p class="text-zinc-500 text-sm">Entenda o funcionamento real do sistema eletrônico.</p>
+                    </div>
+                    <div class="monolith-card border-t-4 border-primary">
+                        <div class="text-4xl font-black mb-4 text-zinc-700">02</div>
+                        <h3 class="text-base md:text-xl font-bold mb-2">LER</h3>
+                        <p class="text-zinc-500 text-sm">Leia e interprete o scanner da maneira correta.</p>
+                    </div>
+                    <div class="monolith-card border-t-4 border-primary">
+                        <div class="text-4xl font-black mb-4 text-zinc-700">03</div>
+                        <h3 class="text-base md:text-xl font-bold mb-2">DIAGNOSTICAR</h3>
+                        <p class="text-zinc-500 text-sm">Siga o passo a passo lógico para isolar a falha.</p>
+                    </div>
+                    <div class="monolith-card border-t-4 border-primary">
+                        <div class="text-4xl font-black mb-4 text-zinc-700">04</div>
+                        <h3 class="text-base md:text-xl font-bold mb-2">EXECUTAR</h3>
+                        <p class="text-zinc-500 text-sm">Execute o reparo sem medo de retorno ou prejuízo.</p>
+                    </div>
+                </div>
+                <p class="mt-6 md:mt-12 text-lg md:text-2xl italic text-secondary">Isso elimina a maior dor da oficina:
+                    INCERTEZA.</p>
+                <a href="#oferta" class="btn-industrial text-base md:text-lg mt-8">Quero seguir esse método</a>
+            </div>
+        </section>
+
+        <!-- DOBRA 8: CONTEÚDO -->
+        <section class="py-16 md:py-24 carbon-pattern">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-black">MAIS DE <span class="text-primary">120 AULAS</span>
+                        PRÁTICAS</h2>
+                    <p class="text-zinc-400 mt-4 text-base md:text-xl italic">Aqui está o conhecimento que faz mecânico
+                        comum virar especialista</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">
+                        ABS COMPLETO</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">
+                        SENSORES (HALL/AMR)</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">
+                        SCANNER & PARÂMETROS</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">
+                        SISTEMA ESP</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">
+                        EPB (FREIO ELETRÔNICO)</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">
+                        REDE CAN</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-primary hover:border-primary/50 transition-colors">
+                        SISTEMAS ADAS</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg hover:border-primary/50 transition-colors">
+                        MÓDULO HIDRÁULICO</div>
+                    <div
+                        class="p-6 bg-surface/80 backdrop-blur-md border border-zinc-800/60 rounded-xl text-center font-industrial text-lg text-secondary col-span-2 md:col-span-4 hover:border-secondary/50 transition-colors">
+                        ESPECIAL MOTOS: ABS EM DUAS RODAS</div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero acesso às aulas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 9 & 10: OPORTUNIDADE + TRANSFORMAÇÃO -->
+        <section class="py-16 md:py-24 bg-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-black text-center mb-8 md:mb-16">O DINHEIRO HOJE ESTÁ NO <span
+                        class="text-secondary italic">DIAGNÓSTICO</span></h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div
+                        class="bg-zinc-950/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-zinc-800/50 shadow-xl transition-transform hover:-translate-y-2 duration-300">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 font-industrial mb-6 md:mb-8 tracking-widest">
+                            <span class="material-symbols-outlined text-sm">warning</span> SEM O MÉTODO
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span
+                                    class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span>
+                                Você trabalha inseguro</li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span
+                                    class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span>
+                                Perde tempo precioso</li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span
+                                    class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span>
+                                Perde dinheiro em peças</li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-base md:text-lg"><span
+                                    class="material-symbols-outlined text-red-500 bg-red-500/10 p-1.5 rounded-full">close</span>
+                                O cliente não confia 100%</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-zinc-900/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-primary/30 shadow-[0_0_50px_rgba(239,26,45,0.15)] relative overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none">
+                        </div>
+                        <div class="relative z-10">
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-500 font-industrial mb-6 md:mb-8 tracking-widest">
+                                <span class="material-symbols-outlined text-sm">verified</span> COM O MÉTODO
+                            </div>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span
+                                        class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span>
+                                    Você domina o diagnóstico</li>
+                                <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span
+                                        class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span>
+                                    Resolve com rapidez</li>
+                                <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span
+                                        class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span>
+                                    Pode cobrar mais caro</li>
+                                <li class="flex items-center gap-3 text-white text-base md:text-lg font-medium"><span
+                                        class="material-symbols-outlined text-green-400 bg-green-500/10 p-1.5 rounded-full">check</span>
+                                    Vira referência técnica</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- PRICE CARD -->
-            <div class="max-w-2xl mx-auto border-2 border-primary bg-zinc-900 relative">
-                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-black px-6 py-1.5 font-black text-sm md:text-base italic tracking-wide">
-                    <span class="material-symbols-outlined align-middle">bolt</span> OFERTA ESPECIAL DE LANÇAMENTO
+                <div class="text-center mt-12">
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero essa transformação</a>
                 </div>
-                
-                <div class="p-6 md:p-10 text-center">
-                    <p class="text-zinc-500 text-sm md:text-base mb-1">De <span class="line-through">R$ 1.690,00</span> por apenas</p>
-                    <div class="flex items-baseline justify-center gap-2 mb-1">
-                        <span class="text-3xl md:text-5xl font-black text-zinc-500">R$</span>
-                        <span class="text-7xl md:text-9xl font-black text-white glow-text italic leading-none">697</span>
-                        <span class="text-2xl md:text-4xl font-black text-zinc-500">,00</span>
-                    </div>
-                    <p class="text-secondary font-industrial text-lg md:text-2xl mb-4">ou 12x de <span class="text-white font-black">R$ 69,70</span></p>
-                    
-                    <div class="inline-flex items-center gap-2 bg-green-900/20 border border-green-500/30 px-4 py-2 mb-6">
-                        <span class="material-symbols-outlined text-green-500 text-lg">savings</span>
-                        <p class="text-green-400 text-sm md:text-base font-bold">Você economiza <span class="text-white">R$ 993</span> — mais que o dobro do investimento</p>
-                    </div>
-                    
-                    <div class="flex items-center justify-center gap-2 mb-6 text-zinc-600 text-xs">
-                        <span class="material-symbols-outlined text-sm">lock</span>
-                        Compra segura via Hotmart
-                        <span class="material-symbols-outlined text-sm">credit_card</span>
-                        Parcele em até 12x
-                        <span class="material-symbols-outlined text-sm">bolt</span>
-                        Acesso imediato
+            </div>
+        </section>
+
+        <!-- DOBRA 11: AUTORIDADE -->
+        <section class="py-16 md:py-24 carbon-pattern">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-6 md:gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary/20 blur-2xl"></div>
+                    <img src="assets/mechanic_master_scene_1777226418380.png"
+                        class="relative z-10 grayscale border border-white/10" alt="Alex Tadeu" loading="lazy">
+                </div>
+                <div>
+                    <span class="text-primary font-industrial mb-2 block text-xs md:text-sm">SEU INSTRUTOR</span>
+                    <h2 class="text-3xl md:text-6xl font-black mb-3 md:mb-6 italic">ALEX TADEU</h2>
+                    <p class="text-lg md:text-2xl text-zinc-300 mb-3 md:mb-6 font-light">Especialista em diagnóstico
+                        automotivo focado em ensino prático.</p>
+                    <p class="text-zinc-500 text-sm md:text-lg leading-relaxed mb-4 md:mb-8">
+                        Formando mecânicos que hoje faturam mais. Aqui não é teoria de sala de aula, é a pura prática do
+                        dia a dia da oficina. Aprendizado direto no campo de batalha para quem quer resultado imediato.
+                    </p>
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero aprender com quem faz</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA DE PROVA SOCIAL: DEPOIMENTOS -->
+        <section class="py-16 md:py-24 bg-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-primary font-industrial tracking-[0.3em] mb-4 block text-xs md:text-sm">PROVA
+                        REAL</span>
+                    <h2 class="text-3xl md:text-6xl font-black italic">RESULTADOS DE QUEM <span
+                            class="text-secondary">ESTÁ NO CAMPO DE BATALHA</span></h2>
+                    <p class="text-zinc-500 mt-4 text-base md:text-xl">Veja o depoimento de alunos que transformaram
+                        suas oficinas com o EAD Master.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- VÍDEO 1 -->
+                    <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy" title="Depoimento de aluno 01"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg md:text-xl text-white">Aluno 01 - Nome/Oficina</h3>
+                            <p class="text-zinc-500 text-sm">"Resolvi um ABS que estava parado há 15 dias em 2 horas."
+                            </p>
+                        </div>
                     </div>
 
-                    <a href="javascript:void(0)" onclick="openCheckoutModal()" class="btn-industrial w-full text-lg md:text-3xl py-5 md:py-8 mb-5 btn-pulse font-black tracking-wider">
-                        QUERO GARANTIR MINHA VAGA AGORA
-                        <span class="material-symbols-outlined text-2xl md:text-4xl">arrow_forward</span>
-                    </a>
-                    
-                    <p class="text-zinc-600 text-xs mb-6"><span class="material-symbols-outlined text-sm align-middle">trending_up</span> Mais de <span class="text-white font-bold">2.300 mecânicos</span> já transformaram sua oficina</p>
+                    <!-- VÍDEO 2 -->
+                    <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy" title="Depoimento de aluno 02"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg md:text-xl text-white">Aluno 02 - Nome/Oficina</h3>
+                            <p class="text-zinc-500 text-sm">"O curso se pagou na primeira semana de aplicação."</p>
+                        </div>
+                    </div>
 
-                    <div class="border-t border-zinc-800 pt-6">
-                        <div class="flex items-center justify-center gap-3 text-zinc-400">
-                            <span class="material-symbols-outlined text-5xl text-green-500">verified_user</span>
-                            <div class="text-left">
-                                <p class="text-white font-black text-sm md:text-base uppercase tracking-wide">7 DIAS DE GARANTIA INCONDICIONAL</p>
-                                <p class="text-zinc-500 text-xs md:text-sm">Você assiste, aplica na oficina, e se não sentir a diferença no seu bolso em 7 dias, eu devolvo <span class="text-white font-bold">cada centavo</span> do seu investimento. Sem burocracia, sem perguntas.</p>
+                    <!-- VÍDEO 3 -->
+                    <div class="monolith-card p-2 bg-zinc-900 border-zinc-800">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" style="border:0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy" title="Depoimento de aluno 03"></iframe>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg md:text-xl text-white">Aluno 03 - Nome/Oficina</h3>
+                            <p class="text-zinc-500 text-sm">"Suporte nota 10, me ajudou em um diagnóstico complexo."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero ter esses resultados também</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 12: BÔNUS -->
+        <section class="py-16 md:py-24 bg-zinc-950">
+            <div class="container mx-auto px-4 md:px-6 text-center">
+                <span class="text-secondary font-industrial tracking-[0.3em] text-sm mb-3 block drop-shadow-md">BÔNUS
+                    EXCLUSIVOS</span>
+                <h2 class="text-3xl md:text-5xl font-black mb-4 md:mb-6 italic glow-text">VOCÊ NÃO ENTRA <span
+                        class="text-primary">SOZINHO</span></h2>
+                <p class="text-zinc-400 text-base md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto">Além do curso completo,
+                    você recebe <span class="text-secondary font-bold">R$ 847 em bônus</span> para acelerar seu
+                    resultado na oficina. <span class="text-white font-bold">100% GRÁTIS.</span></p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
+                    <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
+                        <div
+                            class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">
+                            GRÁTIS</div>
+                        <span
+                            class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">forum</span>
+                        <h3 class="text-sm md:text-base font-bold text-white mb-2">SUPORTE VIP</h3>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-3">Tire dúvidas direto com especialista no
+                            WhatsApp.</p>
+                        <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 197</p>
+                    </div>
+                    <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
+                        <div
+                            class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">
+                            GRÁTIS</div>
+                        <span
+                            class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">menu_book</span>
+                        <h3 class="text-sm md:text-base font-bold text-white mb-2">APOSTILA COMPLETA</h3>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-3">Material técnico detalhado para consulta na
+                            oficina.</p>
+                        <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 147</p>
+                    </div>
+                    <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
+                        <div
+                            class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">
+                            GRÁTIS</div>
+                        <span
+                            class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">checklist</span>
+                        <h3 class="text-sm md:text-base font-bold text-white mb-2">CHECKLIST</h3>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-3">Passo a passo de diagnóstico para não errar
+                            mais.</p>
+                        <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 97</p>
+                    </div>
+                    <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8">
+                        <div
+                            class="absolute -top-3 right-4 bg-primary text-white shadow-lg text-xs font-black px-3 py-1 rounded-full">
+                            GRÁTIS</div>
+                        <span
+                            class="material-symbols-outlined text-primary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text">code</span>
+                        <h3 class="text-sm md:text-base font-bold text-white mb-2">GUIA DE CÓDIGOS</h3>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-3">Tabela completa de códigos de falha ABS/ESP.
+                        </p>
+                        <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 127</p>
+                    </div>
+                    <div class="monolith-card text-left relative group !rounded-2xl !p-6 md:!p-8 hover:border-secondary/50"
+                        style="box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);">
+                        <div
+                            class="absolute -top-3 right-4 bg-secondary text-black shadow-lg text-xs font-black px-3 py-1 rounded-full">
+                            VITALÍCIO</div>
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-4 block group-hover:scale-110 transition-transform glow-text-secondary">all_inclusive</span>
+                        <h3 class="text-sm md:text-base font-bold text-white mb-2">ACESSO VITALÍCIO</h3>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-3">O curso é seu para sempre. Sem mensalidade.</p>
+                        <p class="text-zinc-600 text-xs md:text-sm line-through">R$ 279</p>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-10 md:mt-14 inline-flex items-center gap-4 bg-primary/5 border border-primary/20 px-8 py-4 rounded-2xl backdrop-blur-md shadow-[0_0_30px_rgba(239,26,45,0.1)]">
+                    <span class="text-secondary font-black text-3xl md:text-4xl drop-shadow-lg">R$ 847</span>
+                    <span class="text-zinc-400 text-sm md:text-base text-left border-l border-white/10 pl-4">em bônus
+                        inclusos<br><span class="text-white font-bold">sem custo adicional</span></span>
+                </div>
+
+                <div class="mt-8">
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero todos os bônus</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOBRA 13: ANCORAGEM -->
+        <section class="py-16 md:py-24 carbon-pattern text-center border-y border-white/5">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-6xl font-black mb-8 md:mb-12">PRESTA ATENÇÃO <span
+                        class="text-secondary italic">NISSO:</span></h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8">
+                    <div
+                        class="p-6 md:p-10 bg-red-950/20 border border-red-900/40 rounded-2xl backdrop-blur-md shadow-lg">
+                        <p class="text-red-500 font-industrial text-lg md:text-xl mb-2 md:mb-4 tracking-widest">ERRO DE
+                            DIAGNÓSTICO</p>
+                        <p class="text-2xl md:text-4xl font-black text-white mb-3 italic">PERDA DE R$ 1.000+</p>
+                        <p class="text-zinc-400 text-sm md:text-base">Peças trocadas errado e tempo perdido na oficina.
+                        </p>
+                    </div>
+                    <div
+                        class="p-6 md:p-10 bg-green-950/20 border border-green-900/40 rounded-2xl backdrop-blur-md shadow-lg">
+                        <p class="text-green-500 font-industrial text-lg md:text-xl mb-2 md:mb-4 tracking-widest">MÉTODO
+                            MASTER</p>
+                        <p class="text-2xl md:text-4xl font-black text-white mb-3 italic">GANHO 5X MAIOR</p>
+                        <p class="text-zinc-400 text-sm md:text-base">Serviços premium que pagam o curso na primeira
+                            semana.</p>
+                    </div>
+                </div>
+                <p class="mt-6 md:mt-12 text-base md:text-xl text-zinc-400">Esse treinamento não é custo. É recuperação
+                    de prejuízo + aumento de faturamento.</p>
+            </div>
+        </section>
+
+        <!-- DOBRA 14 & 15: OFERTA + GARANTIA -->
+        <section class="py-16 md:py-24 bg-dark relative overflow-hidden">
+            <div class="absolute inset-0 bg-primary/3"></div>
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+
+                <!-- VALUE STACK -->
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <span class="text-primary font-industrial tracking-[0.3em] text-sm mb-3 block">TUDO QUE VOCÊ RECEBE
+                        HOJE</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">play_circle</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">120+ Aulas Práticas</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">ABS, ESP, EPB, Sensores, CAN, ADAS e
+                                    MOTOS</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">forum</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">Suporte VIP no WhatsApp</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">Tire dúvidas direto com especialista
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">menu_book</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">Apostila + Checklist + Guia de
+                                    Códigos</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">Material completo de consulta na
+                                    oficina</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-primary text-2xl mt-0.5">all_inclusive</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">Acesso Vitalício + Certificado</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">Curso seu para sempre, sem mensalidade
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">stars</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">R$ 847 em Bônus</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">Suporte VIP + Apostila + Checklist +
+                                    Guia + Vitalício</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-4 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50 p-4 rounded-xl hover:bg-zinc-800/50 transition-colors">
+                            <span class="material-symbols-outlined text-secondary text-2xl mt-0.5">verified_user</span>
+                            <div>
+                                <p class="text-white font-bold text-sm md:text-base">7 Dias de Garantia</p>
+                                <p class="text-zinc-400 text-xs md:text-sm mt-1">100% do dinheiro de volta se não gostar
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- PRICE CARD -->
+                <div
+                    class="max-w-2xl mx-auto border border-primary/50 bg-zinc-900/80 backdrop-blur-xl relative rounded-3xl shadow-[0_20px_50px_rgba(239,26,45,0.15)] mt-12">
+                    <div id="oferta"
+                        class="absolute -top-5 left-1/2 -translate-x-1/2 bg-secondary text-black px-8 py-2 rounded-full font-black text-sm md:text-base italic tracking-wide shadow-lg whitespace-nowrap">
+                        <span class="material-symbols-outlined align-middle mr-1">bolt</span> OFERTA ESPECIAL DE
+                        LANÇAMENTO
+                    </div>
+
+                    <div class="p-8 md:p-12 text-center">
+                        <p class="text-zinc-400 text-sm md:text-base mb-2 font-medium">De <span
+                                class="line-through decoration-primary/50">R$ 1.690,00</span> por apenas</p>
+                        <div class="flex items-baseline justify-center gap-2 mb-1">
+                            <span class="text-3xl md:text-5xl font-black text-zinc-500">R$</span>
+                            <span
+                                class="text-7xl md:text-9xl font-black text-white glow-text italic leading-none">697</span>
+                            <span class="text-2xl md:text-4xl font-black text-zinc-500">,00</span>
+                        </div>
+                        <p class="text-secondary font-industrial text-lg md:text-2xl mb-4">ou 12x de <span
+                                class="text-white font-black">R$ 69,70</span></p>
+
+                        <div
+                            class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 px-6 py-3 rounded-full mb-8">
+                            <span class="material-symbols-outlined text-green-500 text-lg">savings</span>
+                            <p class="text-green-400 text-sm md:text-base font-bold">Você economiza <span
+                                    class="text-white">R$ 993</span> — mais que o dobro do investimento</p>
+                        </div>
+
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-4 mb-8 text-zinc-400 text-xs md:text-sm font-medium">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">lock</span> Compra segura via
+                                Hotmart</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">credit_card</span> Parcele em até
+                                12x</span>
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-sm">bolt</span> Acesso imediato</span>
+                        </div>
+
+                        <a href="javascript:void(0)" onclick="openCheckoutModal()"
+                            class="btn-industrial w-full text-lg md:text-2xl py-5 md:py-6 mb-6 btn-pulse font-black tracking-wider rounded-2xl shadow-[0_0_30px_rgba(239,26,45,0.3)] hover:shadow-[0_0_50px_rgba(239,26,45,0.5)]">
+                            QUERO GARANTIR MINHA VAGA AGORA
+                            <span class="material-symbols-outlined text-2xl md:text-3xl ml-2">arrow_forward</span>
+                        </a>
+
+                        <p class="text-zinc-600 text-xs mb-6"><span
+                                class="material-symbols-outlined text-sm align-middle">trending_up</span> Mais de <span
+                                class="text-white font-bold">2.300 mecânicos</span> já transformaram sua oficina</p>
+
+                        <div class="border-t border-zinc-800 pt-6">
+                            <div class="flex items-center justify-center gap-3 text-zinc-400">
+                                <span class="material-symbols-outlined text-5xl text-green-500">verified_user</span>
+                                <div class="text-left">
+                                    <p class="text-white font-black text-sm md:text-base uppercase tracking-wide">7 DIAS
+                                        DE GARANTIA INCONDICIONAL</p>
+                                    <p class="text-zinc-500 text-xs md:text-sm">Você assiste, aplica na oficina, e se
+                                        não sentir a diferença no seu bolso em 7 dias, eu devolvo <span
+                                            class="text-white font-bold">cada centavo</span> do seu investimento. Sem
+                                        burocracia, sem perguntas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URGENCY AND PAYMENT METHODS -->
+                <div
+                    class="max-w-2xl mx-auto mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-zinc-500 text-xs">
+                    <span><span class="material-symbols-outlined text-sm align-middle">credit_card</span> Visa,
+                        Mastercard, Elo, PIX, Boleto</span>
+                    <span class="hidden sm:inline">•</span>
+                    <span><span class="material-symbols-outlined text-sm align-middle">lock</span> Dados
+                        criptografados</span>
+                    <span class="hidden sm:inline">•</span>
+                    <span><span class="material-symbols-outlined text-sm align-middle">bolt</span> Liberação
+                        automática</span>
+                </div>
             </div>
+        </section>
 
-            <!-- URGENCY AND PAYMENT METHODS -->
-            <div class="max-w-2xl mx-auto mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-zinc-500 text-xs">
-                <span><span class="material-symbols-outlined text-sm align-middle">credit_card</span> Visa, Mastercard, Elo, PIX, Boleto</span>
-                <span class="hidden sm:inline">•</span>
-                <span><span class="material-symbols-outlined text-sm align-middle">lock</span> Dados criptografados</span>
-                <span class="hidden sm:inline">•</span>
-                <span><span class="material-symbols-outlined text-sm align-middle">bolt</span> Liberação automática</span>
+        <!-- DOBRA 16: FAQ -->
+        <section class="py-16 md:py-24 carbon-pattern">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl md:text-5xl font-black mb-12 text-center">DÚVIDAS <span
+                        class="text-primary italic">COMUNS</span></h2>
+                <div class="space-y-4">
+                    <details class="group monolith-card p-0">
+                        <summary
+                            class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
+                            Preciso de scanner caro?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Não. O método
+                            foca no diagnóstico lógico e interpretação de parâmetros, independente da marca do seu
+                            scanner.</div>
+                    </details>
+                    <details class="group monolith-card p-0">
+                        <summary
+                            class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
+                            É difícil de aprender?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Não é difícil, é
+                            método. Eu simplifiquei a eletrônica complexa para a linguagem de quem está no dia a dia da
+                            oficina.</div>
+                    </details>
+                    <details class="group monolith-card p-0">
+                        <summary
+                            class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
+                            Serve para qualquer veículo?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Sim. O método
+                            cobre sistemas ABS de carros nacionais, importados e também sistemas específicos de
+                            motocicletas de alta e média cilindrada.</div>
+                    </details>
+                    <details class="group monolith-card p-0">
+                        <summary
+                            class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
+                            Não tenho tempo para estudar?
+                            <span
+                                class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Você aprende no
+                            seu ritmo. As aulas são 100% online e você pode assistir quando e onde quiser, sem pressa e
+                            sem prazo para terminar.</div>
+                    </details>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero começar mesmo com dúvidas</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- DOBRA 16: FAQ -->
-    <section class="py-16 md:py-24 carbon-pattern">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl md:text-5xl font-black mb-12 text-center">DÚVIDAS <span class="text-primary italic">COMUNS</span></h2>
-            <div class="space-y-4">
-                <details class="group monolith-card p-0">
-                    <summary class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
-                        Preciso de scanner caro?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Não. O método foca no diagnóstico lógico e interpretação de parâmetros, independente da marca do seu scanner.</div>
-                </details>
-                <details class="group monolith-card p-0">
-                    <summary class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
-                        É difícil de aprender?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Não é difícil, é método. Eu simplifiquei a eletrônica complexa para a linguagem de quem está no dia a dia da oficina.</div>
-                </details>
-                <details class="group monolith-card p-0">
-                    <summary class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
-                        Serve para qualquer veículo?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Sim. O método cobre sistemas ABS de carros nacionais, importados e também sistemas específicos de motocicletas de alta e média cilindrada.</div>
-                </details>
-                <details class="group monolith-card p-0">
-                    <summary class="p-4 md:p-6 cursor-pointer font-bold text-base md:text-xl flex justify-between items-center list-none">
-                        Não tenho tempo para estudar?
-                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-                    </summary>
-                    <div class="px-4 md:px-6 pb-4 md:pb-6 pt-0 text-zinc-400 text-sm md:text-base">Você aprende no seu ritmo. As aulas são 100% online e você pode assistir quando e onde quiser, sem pressa e sem prazo para terminar.</div>
-                </details>
+        <!-- DOBRA 17: FECHAMENTO -->
+        <section class="py-16 md:py-24 bg-primary text-black text-center relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-3xl md:text-7xl font-black mb-4 md:mb-8 italic">O MERCADO NÃO ESPERA</h2>
+                <p class="text-lg md:text-2xl font-bold mb-6 md:mb-12 max-w-2xl mx-auto leading-tight">Ou você continua
+                    perdendo dinheiro e ficando para trás, ou você decide evoluir e faturar como um especialista hoje.
+                </p>
+                <a href="#oferta"
+                    class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block btn-pulse border border-primary/30 rounded-2xl shadow-[0_0_40px_rgba(239,26,45,0.4)]">
+                    QUERO DOMINAR O DIAGNÓSTICO E FATURAR MAIS AGORA
+                </a>
             </div>
-            <div class="text-center mt-12">
-                <a href="#oferta" class="btn-industrial text-base md:text-lg">Quero começar mesmo com dúvidas</a>
+            <!-- DECORATIVE BACKGROUND TEXT -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                <span class="text-[20vw] font-black italic select-none">NOW</span>
             </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 md:py-12 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="warning-divider w-24 mx-auto mb-8"></div>
+            <p class="text-zinc-500 text-sm uppercase tracking-widest">
+                © 2026 Alex Tadeu - EAD Master em Freios. <br>
+                <span class="text-zinc-700">ARB Treinamentos</span>
+            </p>
         </div>
-    </section>
+    </footer>
 
-    <!-- DOBRA 17: FECHAMENTO -->
-    <section class="py-16 md:py-24 bg-primary text-black text-center relative overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-3xl md:text-7xl font-black mb-4 md:mb-8 italic">O MERCADO NÃO ESPERA</h2>
-            <p class="text-lg md:text-2xl font-bold mb-6 md:mb-12 max-w-2xl mx-auto leading-tight">Ou você continua perdendo dinheiro e ficando para trás, ou você decide evoluir e faturar como um especialista hoje.</p>
-            <a href="#oferta" class="bg-black text-primary px-6 py-4 md:px-12 md:py-6 text-lg md:text-2xl font-black italic hover:scale-105 transition-transform inline-block btn-pulse">
-                QUERO DOMINAR O DIAGNÓSTICO E FATURAR MAIS AGORA
-            </a>
-        </div>
-        <!-- DECORATIVE BACKGROUND TEXT -->
-        <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-            <span class="text-[20vw] font-black italic select-none">NOW</span>
-        </div>
-    </section>
-
-</main>
-
-<footer class="py-8 md:py-12 bg-black border-t border-white/5">
-    <div class="container mx-auto px-6 text-center">
-        <div class="warning-divider w-24 mx-auto mb-8"></div>
-        <p class="text-zinc-500 text-sm uppercase tracking-widest">
-            © 2026 Alex Tadeu - EAD Master em Freios. <br>
-            <span class="text-zinc-700">Desenvolvido com UI/UX Pro Max Intelligence.</span>
-        </p>
-    </div>
-</footer>
-
-<!-- ==========================================
+    <!-- ==========================================
      POP-UP (MODAL) DE CAPTURA DE LEAD
      ========================================== -->
-<div id="checkoutModal" class="fixed inset-0 bg-black/90 z-[9999] hidden flex items-center justify-center opacity-0 transition-opacity duration-300 px-4" style="backdrop-filter: blur(4px);">
-    <div id="checkoutModalContent" class="bg-zinc-900 border border-zinc-700 rounded-2xl p-6 md:p-8 w-full max-w-md relative transform scale-95 transition-transform duration-300" style="box-shadow: 0 0 40px rgba(239, 26, 45, 0.2);">
-        
-        <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        
-        <h3 class="font-industrial font-bold text-2xl text-white mb-2">Quase lá!</h3>
-        <p class="text-zinc-400 text-sm mb-6">Preencha seus dados para liberar seu acesso ao treinamento.</p>
-        
-        <form id="leadForm" class="space-y-4">
-            <div>
-                <label for="leadNome" class="block text-sm text-zinc-300 mb-1">Seu Nome Completo</label>
-                <input type="text" id="leadNome" required class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Ex: João da Silva">
-            </div>
-            <div>
-                <label for="leadWhatsApp" class="block text-sm text-zinc-300 mb-1">Seu WhatsApp</label>
-                <input type="tel" id="leadWhatsApp" required class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="(11) 99999-9999">
-            </div>
-            
-            <button type="submit" id="submitLeadBtn" class="w-full font-industrial bg-primary hover:bg-red-700 text-black text-lg font-bold py-4 px-4 rounded-lg transition-all active:scale-95 uppercase mt-4 flex items-center justify-center gap-2" style="box-shadow: 0 4px 20px rgba(239, 26, 45, 0.3);">
-                Continuar
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+    <div id="checkoutModal"
+        class="fixed inset-0 bg-black/90 z-[9999] hidden flex items-center justify-center opacity-0 transition-opacity duration-300 px-4"
+        style="backdrop-filter: blur(4px);">
+        <div id="checkoutModalContent"
+            class="bg-zinc-900 border border-zinc-700 rounded-2xl p-6 md:p-8 w-full max-w-md relative transform scale-95 transition-transform duration-300"
+            style="box-shadow: 0 0 40px rgba(239, 26, 45, 0.2);">
+
+            <button onclick="closeCheckoutModal()"
+                class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
-        </form>
-        
-        <p class="text-xs text-zinc-500 text-center mt-4">Seus dados estão 100% seguros conosco.</p>
+
+            <h3 class="font-industrial font-bold text-2xl text-white mb-2">Quase lá!</h3>
+            <p class="text-zinc-400 text-sm mb-6">Preencha seus dados para liberar seu acesso ao treinamento.</p>
+
+            <form id="leadForm" class="space-y-4">
+                <div>
+                    <label for="leadNome" class="block text-sm text-zinc-300 mb-1">Seu Nome Completo</label>
+                    <input type="text" id="leadNome" required
+                        class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                        placeholder="Ex: João da Silva">
+                </div>
+                <div>
+                    <label for="leadWhatsApp" class="block text-sm text-zinc-300 mb-1">Seu WhatsApp</label>
+                    <input type="tel" id="leadWhatsApp" required
+                        class="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"
+                        placeholder="(11) 99999-9999">
+                </div>
+
+                <button type="submit" id="submitLeadBtn"
+                    class="w-full font-industrial bg-primary hover:bg-red-700 text-black text-lg font-bold py-4 px-4 rounded-lg transition-all active:scale-95 uppercase mt-4 flex items-center justify-center gap-2"
+                    style="box-shadow: 0 4px 20px rgba(239, 26, 45, 0.3);">
+                    Continuar
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <p class="text-xs text-zinc-500 text-center mt-4">Seus dados estão 100% seguros conosco.</p>
+        </div>
     </div>
-</div>
 
-<script>
-    const modal = document.getElementById('checkoutModal');
-    const modalContent = document.getElementById('checkoutModalContent');
-    
-    function openCheckoutModal() {
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-            modal.classList.remove('opacity-0');
-            modalContent.classList.remove('scale-95');
-            modalContent.classList.add('scale-100');
-        }, 10);
-    }
+    <script>
+        const modal = document.getElementById('checkoutModal');
+        const modalContent = document.getElementById('checkoutModalContent');
 
-    function closeCheckoutModal() {
-        modal.classList.add('opacity-0');
-        modalContent.classList.remove('scale-100');
-        modalContent.classList.add('scale-95');
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 300);
-    }
+        function openCheckoutModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+                modalContent.classList.add('scale-100');
+            }, 10);
+        }
 
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeCheckoutModal();
-    });
+        function closeCheckoutModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
 
-    document.getElementById('leadWhatsApp').addEventListener('input', function (e) {
-        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-        e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-    });
-
-    document.getElementById('leadForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const btn = document.getElementById('submitLeadBtn');
-        const nome = document.getElementById('leadNome').value;
-        const whatsapp = document.getElementById('leadWhatsApp').value;
-        
-        const LINK_BASE = "https://pay.hotmart.com/A104000703B?checkoutMode=10";
-
-        const params = new URLSearchParams(window.location.search);
-        const checkoutURL = new URL(LINK_BASE);
-        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 'fbclid', 'gclid'].forEach(p => {
-            if (params.has(p)) checkoutURL.searchParams.append(p, params.get(p));
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) closeCheckoutModal();
         });
 
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...';
-        btn.disabled = true;
-        btn.classList.add('opacity-75', 'cursor-not-allowed');
+        document.getElementById('leadWhatsApp').addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
 
-        try {
-            await fetch('https://webhook.veralscastro.com.br/webhook/leads_pag_captura_alex_tadeu', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    nome: nome,
-                    whatsapp: whatsapp,
-                    origem: 'pagina_vendas_curso_p0300'
-                })
+        document.getElementById('leadForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitLeadBtn');
+            const nome = document.getElementById('leadNome').value;
+            const whatsapp = document.getElementById('leadWhatsApp').value;
+
+            const LINK_BASE = "https://pay.hotmart.com/A104000703B?checkoutMode=10";
+
+            const params = new URLSearchParams(window.location.search);
+            const checkoutURL = new URL(LINK_BASE);
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 'fbclid', 'gclid'].forEach(p => {
+                if (params.has(p)) checkoutURL.searchParams.append(p, params.get(p));
             });
-            window.location.href = checkoutURL.toString();
-        } catch (error) {
-            console.error('Erro ao enviar lead pro webhook:', error);
-            window.location.href = checkoutURL.toString();
-        } finally {
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            btn.classList.remove('opacity-75', 'cursor-not-allowed');
-        }
-    });
-</script>
+
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            try {
+                await fetch('https://webhook.veralscastro.com.br/webhook/leads_pag_captura_alex_tadeu', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        nome: nome,
+                        whatsapp: whatsapp,
+                        origem: 'pagina_vendas_curso_p0300'
+                    })
+                });
+                window.location.href = checkoutURL.toString();
+            } catch (error) {
+                console.error('Erro ao enviar lead pro webhook:', error);
+                window.location.href = checkoutURL.toString();
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
+    </script>
+
+    <!-- Mouse Tracking for Monolith Cards -->
+    <script>
+        document.addEventListener("mousemove", (e) => {
+            document.querySelectorAll(".monolith-card").forEach((card) => {
+                const rect = card.getBoundingClientRect(),
+                    x = e.clientX - rect.left,
+                    y = e.clientY - rect.top;
+
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            });
+        });
+    </script>
 
 </body>
+
 </html>
